@@ -1,4 +1,4 @@
-package com.citi.springboot.cros.controller;
+package org.zhouhy.springboot.cros.controller;
 
 import org.json.simple.JSONObject;
 import org.springframework.http.MediaType;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.citi.springboot.cros.entity.RequestLoginBean;
+import org.zhouhy.springboot.cros.entity.RequestLoginBean;
 
 @RestController
 @RequestMapping(value = "/index", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)

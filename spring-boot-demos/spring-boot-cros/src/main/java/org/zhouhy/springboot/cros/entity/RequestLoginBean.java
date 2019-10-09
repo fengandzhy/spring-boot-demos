@@ -1,4 +1,4 @@
-package com.citi.springboot.cros.entity;
+package org.zhouhy.springboot.cros.entity;
 
 public class RequestLoginBean {
 	private String username;

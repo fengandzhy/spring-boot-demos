@@ -1,4 +1,4 @@
-package com.citi.springboot.cros;
+package org.zhouhy.springboot.cros;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

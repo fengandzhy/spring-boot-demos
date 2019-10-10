@@ -1,4 +1,4 @@
-package org.zhouhy.springboot.service;
+package org.zhouhy.springboot.quartz.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Configuration;

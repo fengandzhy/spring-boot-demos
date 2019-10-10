@@ -1,4 +1,4 @@
-package org.zhouhy.springboot.entity;
+package org.zhouhy.springboot.quartz.entity;
 
 import lombok.Data;
 

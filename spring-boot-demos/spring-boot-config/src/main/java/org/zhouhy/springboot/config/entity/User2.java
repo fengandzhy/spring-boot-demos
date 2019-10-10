@@ -7,11 +7,13 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "user")
-public class User {
+@PropertySource(value = {"classpath:user.properties"})
+public class User2 {
 	private int id;
 	private String username;
 	private String password;
@@ -20,7 +22,6 @@ public class User {
 	private List<String> list = new ArrayList<>();	
 	private Map<String,Object> map = new HashMap<>();
 	private Address address;
-	
 	public int getId() {
 		return id;
 	}
@@ -71,7 +72,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", birthday=" + birthday
+		return "User2 [id=" + id + ", username=" + username + ", password=" + password + ", birthday=" + birthday
 				+ ", sex=" + sex + ", list=" + list + ", map=" + map + ", address=" + address + "]";
 	}	
 }

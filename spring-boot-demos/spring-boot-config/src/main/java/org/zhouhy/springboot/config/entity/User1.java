@@ -6,21 +6,36 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "user")
-public class User {
-	private int id;
-	private String username;
-	private String password;
-	private Date birthday;
-	private boolean sex;
-	private List<String> list = new ArrayList<>();	
-	private Map<String,Object> map = new HashMap<>();
-	private Address address;
+public class User1 {
 	
+	@Value(value="#{1+2}")
+	private int id;
+	
+	@Value(value="${user.username}")
+	private String username;
+	
+	@Value(value="${user.password}")
+	private String password;
+	
+	@Value(value="${user.birthday}")
+	private Date birthday;
+	
+	@Value("true")
+	private boolean sex;
+	
+	//@Value不能弄复杂数据
+	//@Value(value="${user.list}")
+	private List<String> list = new ArrayList<>();	
+	
+	//@Value(value="${user.map}")
+	private Map<String,Object> map = new HashMap<>();
+	
+	//@Value(value="${user.address}")
+	private Address address;
 	public int getId() {
 		return id;
 	}
@@ -71,7 +86,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", birthday=" + birthday
+		return "User1 [id=" + id + ", username=" + username + ", password=" + password + ", birthday=" + birthday
 				+ ", sex=" + sex + ", list=" + list + ", map=" + map + ", address=" + address + "]";
 	}	
 }

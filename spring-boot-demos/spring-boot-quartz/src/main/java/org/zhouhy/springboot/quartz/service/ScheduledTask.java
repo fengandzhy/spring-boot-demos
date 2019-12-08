@@ -1,6 +1,9 @@
 package org.zhouhy.springboot.quartz.service;
 
 import lombok.extern.slf4j.Slf4j;
+
+import java.time.LocalDate;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
@@ -13,6 +16,6 @@ import org.springframework.stereotype.Component;
 public class ScheduledTask {
 	
 	public void sayHello(){
-        log.info("Hello world, i'm the king of the world!!!");
+        log.info("Hello world, i'm the king of the world!!!");        
     }
 }

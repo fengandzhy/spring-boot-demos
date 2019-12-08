@@ -22,6 +22,8 @@
 	<modules>
 		<module>spring-boot-cros</module>
 		<module>spring-boot-quartz</module>
+		<module>spring-boot-config</module>
+		<module>spring-boot-schedule</module>
 	</modules>
 	
 	<dependencies>

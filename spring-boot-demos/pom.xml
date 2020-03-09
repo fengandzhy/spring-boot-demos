@@ -27,7 +27,9 @@
         <module>spring-boot-begin</module>
 		<module>spring-boot-upload</module>
         <module>spring-boot-json</module>
-    </modules>
+		<module>spring-boot-resource</module>
+
+	</modules>
 
 	<dependencies>
 		<dependency>

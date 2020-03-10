@@ -28,8 +28,9 @@
 		<module>spring-boot-upload</module>
         <module>spring-boot-json</module>
 		<module>spring-boot-resource</module>
+        <module>spring-boot-web</module>
 
-	</modules>
+    </modules>
 
 	<dependencies>
 		<dependency>

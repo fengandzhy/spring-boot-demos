@@ -9,6 +9,9 @@ import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+/**
+ * @ConfigurationProperties 来告诉你，在配置文件哪个前缀可以使用
+ * */
 @Component
 @ConfigurationProperties(prefix = "user")
 public class User {

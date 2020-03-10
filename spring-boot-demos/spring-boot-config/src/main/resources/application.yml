@@ -14,6 +14,8 @@ user:
   address: 
     id: 100
     detail: asdf
+debug: true
+
   
     
     

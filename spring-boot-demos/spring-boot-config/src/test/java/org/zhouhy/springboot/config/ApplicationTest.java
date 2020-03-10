@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.zhouhy.springboot.config.entity.Address;
 import org.zhouhy.springboot.config.entity.User;
 import org.zhouhy.springboot.config.entity.User1;
 import org.zhouhy.springboot.config.entity.User2;
@@ -21,11 +22,15 @@ public class ApplicationTest {
 	
 	@Autowired
 	private User2 user2;
+
+	@Autowired
+	private Address address;
 	
 	@Test
 	public void test() {
 		System.out.println(user);
 		System.out.println(user1);
 		System.out.println(user2);
+		System.out.println(address);
 	}
 }

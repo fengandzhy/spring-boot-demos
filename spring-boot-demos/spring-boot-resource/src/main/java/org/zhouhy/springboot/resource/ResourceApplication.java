@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *  但是，如果在application.properties里面加入一个自定义的资源文件夹，例如spring.resources.static-locations = classpath:/javascript/ 此时浏览器里输入http://localhost:8080/js/test.js 就无效了
  *  因为就相当于把默认的资源文件集合给全部覆盖掉了，所以必须把所有的资源文件夹都加入进来 spring.resources.static-locations = classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/javascript/
  *
- *  静态资源文件存储在CDN
+ *  生产环境下，静态资源文件存储在CDN
  * */
 @SpringBootApplication
 public class ResourceApplication {

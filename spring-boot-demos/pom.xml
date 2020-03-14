@@ -32,8 +32,9 @@
         <module>spring-boot-jsp</module>
         <module>spring-boot-freemarker</module>
         <module>spring-boot-thymeleaf</module>
+		<module>spring-boot-mvc</module>
 
-    </modules>
+	</modules>
 
 	<dependencies>
 		<dependency>

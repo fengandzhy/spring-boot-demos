@@ -9,6 +9,8 @@ import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 import org.springframework.scheduling.support.CronTrigger;
 import org.springframework.util.StringUtils;
+
+import javax.sql.DataSource;
 import java.time.LocalDateTime;
 
 
@@ -25,6 +27,7 @@ public class CompleteScheduleConfig implements SchedulingConfigurer{
     @Autowired
     @SuppressWarnings("all")
     CronMapper cronMapper;
+
 	
 	@Override
 	public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {

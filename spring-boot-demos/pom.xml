@@ -34,6 +34,7 @@
         <module>spring-boot-thymeleaf</module>
 		<module>spring-boot-mvc</module>
 		<module>spring-boot-jdbc</module>
+		<module>spring-boot-druid</module>
 
 	</modules>
 

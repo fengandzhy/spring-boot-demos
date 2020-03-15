@@ -35,8 +35,9 @@
 		<module>spring-boot-mvc</module>
 		<module>spring-boot-jdbc</module>
 		<module>spring-boot-druid</module>
+        <module>spring-boot-mybatis</module>
 
-	</modules>
+    </modules>
 
 	<dependencies>
 		<dependency>

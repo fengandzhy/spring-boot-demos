@@ -1,4 +1,4 @@
-package org.zhouhy.springboot.jpa.entity;
+package org.zhouhy.demo.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -6,21 +6,17 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
 
 @Setter
 @Getter
 @ToString
 @EqualsAndHashCode
 @Entity
-@Table(name = "t_users")
-public class User implements Serializable {
+@Table(name = "t_address")
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String username;
-    private String password;
-    private Date registerDate;
+    private String addInfo;
 }

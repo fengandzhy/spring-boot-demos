@@ -39,6 +39,7 @@
         <module>spring-boot-jpa</module>
         <module>spring-boot-demo</module>
         <module>spring-boot-test</module>
+        <module>spring-boot-exception</module>
 
     </modules>
 

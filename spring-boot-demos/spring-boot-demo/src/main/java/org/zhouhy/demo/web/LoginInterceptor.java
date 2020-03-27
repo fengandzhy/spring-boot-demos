@@ -30,6 +30,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             request.setAttribute("loginErr","Please login");
             //request.getRequestDispatcher("/login.html").forward(request,response);
             response.sendRedirect("/login.html?ac=1");
+
             return false;
         }
         return true;

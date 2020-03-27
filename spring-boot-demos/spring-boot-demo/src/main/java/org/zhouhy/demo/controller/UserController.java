@@ -121,6 +121,7 @@ public class UserController {
 //
 //        u.setRegDate(user.getRegDate());
 //        u.setAddress(address);
+        System.out.println("abcd");
         log.info(user.toString());
         userService.updateUser(user);
         return "redirect:/userlist.html";

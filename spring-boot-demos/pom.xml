@@ -38,6 +38,7 @@
         <module>spring-boot-mybatis</module>
         <module>spring-boot-jpa</module>
         <module>spring-boot-demo</module>
+        <module>spring-boot-test</module>
 
     </modules>
 
@@ -73,6 +74,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<skip>true</skip>
+					<fork>true</fork>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -40,6 +40,7 @@
         <module>spring-boot-demo</module>
         <module>spring-boot-test</module>
         <module>spring-boot-exception</module>
+        <module>spring-boot-log</module>
 
     </modules>
 

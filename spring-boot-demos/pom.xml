@@ -44,8 +44,9 @@
         <module>spring-boot-async</module>
         <module>spring-boot-swagger</module>
 		<module>spring-boot-resp</module>
+        <module>spring-boot-commons</module>
 
-	</modules>
+    </modules>
 
 	<dependencies>
 		<dependency>

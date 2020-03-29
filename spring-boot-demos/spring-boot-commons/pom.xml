@@ -9,13 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-resp</artifactId>
+    <artifactId>spring-boot-commons</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.zhouhy</groupId>
-            <artifactId>spring-boot-commons</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-    </dependencies>
+
 </project>

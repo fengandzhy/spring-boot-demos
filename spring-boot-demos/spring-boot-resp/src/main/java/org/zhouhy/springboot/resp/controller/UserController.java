@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.zhouhy.springboot.commons.response.Result;
 import org.zhouhy.springboot.resp.entity.UserVO;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
@@ -41,6 +42,9 @@ public class UserController {
         int i=9/0;
     }
 
-
+    @GetMapping(value="/getResult")
+    public Result getResult(  ){
+        return Result.suc("test");
+    }
 
 }

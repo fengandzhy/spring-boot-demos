@@ -30,4 +30,13 @@ public enum ResultCode {
     public String message() {
         return this.message;
     }
+
+    public static ResultCode getResultCodeByMessage(String message){
+        for(ResultCode e:ResultCode.values()){
+            if (e.message().equals(message)){
+                return e;
+            }
+        }
+        return null;
+    }
 }

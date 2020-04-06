@@ -1,12 +1,15 @@
 package org.zhouhy.springboot.exception.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.zhouhy.springboot.commons.eums.ResultCode;
+import org.zhouhy.springboot.commons.exception.BusinessException;
 import org.zhouhy.springboot.exception.exceptions.MyException;
 
-@Controller
+@Api(description = "用户接口")
+@RestController
 public class ExceptionController {
 
 
@@ -18,5 +21,15 @@ public class ExceptionController {
     @RequestMapping(value="/test/myexception",method=RequestMethod.GET)
     public void excep(){
         throw new MyException("0001","error");
+    }
+
+    @PostMapping(value="/error4")
+    public void  error4(  ){
+        throw new RuntimeException("用户名已存在");
+    }
+
+    @PostMapping(value="/error3")
+    public void  error3(  ){
+        throw new BusinessException(ResultCode.USER_HAS_EXISTED);
     }
 }

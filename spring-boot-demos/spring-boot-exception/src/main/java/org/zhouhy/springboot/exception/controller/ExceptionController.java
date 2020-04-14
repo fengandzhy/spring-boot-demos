@@ -20,7 +20,7 @@ public class ExceptionController {
 
     @RequestMapping(value="/test/myexception",method=RequestMethod.GET)
     public void excep(){
-        throw new MyException("0001","error");
+        throw new MyException(100,"error");
     }
 
     @PostMapping(value="/error4")

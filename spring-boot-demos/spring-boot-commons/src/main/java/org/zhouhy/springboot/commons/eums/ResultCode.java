@@ -37,6 +37,6 @@ public enum ResultCode {
                 return e;
             }
         }
-        return null;
+        return ResultCode.SYSTEM_ERROR;
     }
 }

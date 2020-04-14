@@ -45,6 +45,7 @@
         <module>spring-boot-swagger</module>
 		<module>spring-boot-resp</module>
         <module>spring-boot-commons</module>
+        <module>spring-boot-validate</module>
 
     </modules>
 

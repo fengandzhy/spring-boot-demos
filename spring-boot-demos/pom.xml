@@ -46,6 +46,7 @@
 		<module>spring-boot-resp</module>
         <module>spring-boot-commons</module>
         <module>spring-boot-validate</module>
+        <module>spring-boot-bootstraptable</module>
 
     </modules>
 

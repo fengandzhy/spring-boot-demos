@@ -48,6 +48,7 @@
         <module>spring-boot-validate</module>
         <module>spring-boot-bootstraptable</module>
 
+
     </modules>
 
 	<dependencies>

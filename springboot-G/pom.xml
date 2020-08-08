@@ -10,6 +10,7 @@
     <modules>
         <module>springboot-async</module>
         <module>springboot-swagger</module>
+        <module>springboot-commons</module>
     </modules>
     <packaging>pom</packaging>
 

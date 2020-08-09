@@ -37,6 +37,7 @@ public class ReponseHandler implements ResponseBodyAdvice<Object> {
 
         if (body instanceof String) {
             return JsonUtil.object2Json(Result.suc(body));
+            //return Result.suc(body);
         }
         return Result.suc(body);
     }

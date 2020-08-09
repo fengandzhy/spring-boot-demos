@@ -32,4 +32,9 @@ public class ExceptionController {
     public void  error3(  ){
         throw new BusinessException(ResultCode.USER_HAS_EXISTED);
     }
+
+    @RequestMapping(value="/success",method=RequestMethod.GET)
+    public String success(){
+        return "success";
+    }
 }

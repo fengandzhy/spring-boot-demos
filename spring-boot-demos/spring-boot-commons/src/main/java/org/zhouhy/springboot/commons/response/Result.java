@@ -8,7 +8,7 @@ import org.zhouhy.springboot.commons.eums.ResultCode;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Result<T> {
+public class Result{
 
     private Integer status;
     /**
@@ -18,7 +18,7 @@ public class Result<T> {
     /**
      * 3.data数据：本次返回的数据。
      */
-    private T data;
+    private Object data;
 
     /**
      * 成功，创建ResResult：没data数据

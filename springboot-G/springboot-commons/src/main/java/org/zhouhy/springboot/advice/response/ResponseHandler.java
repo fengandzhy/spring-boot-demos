@@ -23,6 +23,8 @@ import org.zhouhy.springboot.utils.JsonUtil;
  * 具体的做法就是ResponseBean 来封装返回的格式, 而ResultEnum 告诉了你各种返回的结果
  * 所以主要就三个要素，第一继承了ResponseBodyAdvice的和有@ControllerAdvice注解的类,
  * 第二用于封装返回结果的ResponseBean 第三就是包含各种结果的ResultEnum
+ * @RestControllerAdvice注解包含了@ControllerAdvice注解和@ResponseBody注解。
+ *
  *
  *
  * */

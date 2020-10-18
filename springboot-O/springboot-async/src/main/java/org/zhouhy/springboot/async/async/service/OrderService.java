@@ -23,11 +23,11 @@ public class OrderService {
         mockQueue.setPlaceOrder(orderNumber);
         DeferredResult<String> result = new DeferredResult<>();
         //模拟组成结果
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         deferredResultHolder.getMap().put(orderNumber,result);
         return result;
     }

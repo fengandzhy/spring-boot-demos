@@ -10,6 +10,7 @@
     <modules>
         <module>springboot-annotaionsecutiry</module>
         <module>springboot-async</module>
+        <module>springboot-staticresource</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,12 +1,11 @@
-package org.zhouhy.springboot.async;
+package org.zhouhy.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class AsyncApp {
+public class readConfigFileApp{
     public static void main(String[] args) {
-        SpringApplication.run(AsyncApp.class,args);
+        SpringApplication.run(readConfigFileApp.class,args);
     }
 }

@@ -1,4 +1,4 @@
-package org.zhouhy.springboot.async.async;
+package org.zhouhy.springboot.async;
 
 
 import org.springframework.stereotype.Component;

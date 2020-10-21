@@ -1,4 +1,4 @@
-package org.zhouhy.springboot.async.async;
+package org.zhouhy.springboot.async;
 
 
 import lombok.extern.slf4j.Slf4j;

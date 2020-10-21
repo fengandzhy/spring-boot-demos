@@ -1,12 +1,12 @@
-package org.zhouhy.springboot.async.async.service;
+package org.zhouhy.springboot.async.service;
 
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.async.DeferredResult;
-import org.zhouhy.springboot.async.async.DeferredResultHolder;
-import org.zhouhy.springboot.async.async.MockQueue;
+import org.zhouhy.springboot.async.DeferredResultHolder;
+import org.zhouhy.springboot.async.MockQueue;
 
 @Service
 public class OrderService {

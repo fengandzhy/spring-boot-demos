@@ -1,4 +1,4 @@
-package org.zhouhy.springboot.async.controller;
+package org.zhouhy.springboot.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.DeferredResult;
-import org.zhouhy.springboot.async.async.DeferredResultHolder;
-import org.zhouhy.springboot.async.async.MockQueue;
-import org.zhouhy.springboot.async.async.service.OrderService;
+import org.zhouhy.springboot.async.DeferredResultHolder;
+import org.zhouhy.springboot.async.MockQueue;
+import org.zhouhy.springboot.async.service.OrderService;
 
 import java.util.concurrent.Callable;
 

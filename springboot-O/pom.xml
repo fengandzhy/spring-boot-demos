@@ -11,6 +11,7 @@
         <module>springboot-annotaionsecutiry</module>
         <module>springboot-async</module>
         <module>springboot-staticresource</module>
+        <module>springboot-readconfig</module>
     </modules>
     <packaging>pom</packaging>
 

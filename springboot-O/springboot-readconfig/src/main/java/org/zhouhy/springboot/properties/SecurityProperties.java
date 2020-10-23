@@ -10,6 +10,16 @@ public class SecurityProperties {
 
     private BrowserProperties browser;
 
+    private CodeProperties code;
+
+    public CodeProperties getCode() {
+        return code;
+    }
+
+    public void setCode(CodeProperties code) {
+        this.code = code;
+    }
+
     private String username;
 
     public BrowserProperties getBrowser() {

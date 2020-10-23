@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.zhouhy.springboot.properties.SecurityProperties;
+import org.zhouhy.springboot.properties.TestProperties;
 import org.zhouhy.springboot.properties.UserProperties;
 
 @RunWith(SpringRunner.class)
@@ -20,6 +21,9 @@ public class AppTest {
 
     @Autowired
     private UserProperties userProperties;
+
+    @Autowired
+    private TestProperties testProperties;
 
     @Test
     public void test1() {
@@ -39,6 +43,16 @@ public class AppTest {
     @Test
     public void test4() {
         System.out.println(userProperties);
+    }
+
+    @Test
+    public void test5() {
+        System.out.println(testProperties.getCode().getImage().getHeight());
+    }
+
+    @Test
+    public void test6() {
+        System.out.println(securityProperties.getCode().getImage().getHeight());
     }
 
 

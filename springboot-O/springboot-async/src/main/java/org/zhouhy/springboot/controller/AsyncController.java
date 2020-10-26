@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.async.DeferredResult;
 import org.zhouhy.springboot.async.DeferredResultHolder;
@@ -30,7 +31,8 @@ public class AsyncController {
     public DeferredResult<String> order(){
         log.info("主线程开始");
 
-        DeferredResult<String> result = orderService.order();
+        DeferredResult<String> result = new DeferredResult<>();
+        result.setResult("abcd");
 
         log.info("主线程结束");
         return result;

@@ -12,6 +12,7 @@
         <module>springboot-async</module>
         <module>springboot-staticresource</module>
         <module>springboot-readconfig</module>
+        <module>springboot-async-1</module>
     </modules>
     <packaging>pom</packaging>
 

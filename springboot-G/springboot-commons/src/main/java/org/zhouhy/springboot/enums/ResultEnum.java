@@ -7,6 +7,7 @@ public enum ResultEnum {
     AUTHORIZATION_ERROR(2000,"authorization error"),
     USER_EXITS(2001,"user dose not exists"),
     BY_ZERO(2003,"/ by zero"),
+    PARAM_IS_INVALID(2004,"validate failed"),
     UNKNOWN_ERROR(2002,"UNKNOWN_ERROR");
 
     private Integer code;

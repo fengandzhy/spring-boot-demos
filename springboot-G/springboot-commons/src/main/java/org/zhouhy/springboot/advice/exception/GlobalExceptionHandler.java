@@ -2,14 +2,18 @@ package org.zhouhy.springboot.advice.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.zhouhy.springboot.enums.ResultEnum;
 import org.zhouhy.springboot.exceptions.MyException;
 import org.zhouhy.springboot.exceptions.MyRuntimeException;
 import org.zhouhy.springboot.reponse.ErrorBean;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 /**
@@ -48,11 +52,31 @@ public class GlobalExceptionHandler {
         return this.handleException(e,request);
     }
 
+    @ResponseStatus(HttpStatus.BAD_REQUEST) //返回给客户端显示的状态码
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ErrorBean handleMethodArgumentNotValidException(MethodArgumentNotValidException e, HttpServletRequest request){
+        String message = this.handle(e.getBindingResult().getFieldErrors());
+        ErrorBean  errorBean = new ErrorBean(ResultEnum.PARAM_IS_INVALID,message);
+        log.warn("URL:{} ,参数校验异常:{}", request.getRequestURI(),message);
+        return errorBean;
+    }
+
     private ErrorBean handleException(Throwable e,HttpServletRequest request){
         ErrorBean bean = new ErrorBean();
         log.info(e.getMessage());
         bean.setException(e);
         log.error("URL:{} ,系统异常: ",request.getRequestURI(), e);
         return bean;
+    }
+
+    private String handle(List<FieldError> fieldErrors) {
+        StringBuilder sb = new StringBuilder();
+        for (FieldError obj : fieldErrors) {
+            sb.append(obj.getField());
+            sb.append("=[");
+            sb.append(obj.getDefaultMessage());
+            sb.append("]  ");
+        }
+        return sb.toString();
     }
 }

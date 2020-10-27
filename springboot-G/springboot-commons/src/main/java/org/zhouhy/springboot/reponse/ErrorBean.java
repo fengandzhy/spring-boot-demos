@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.zhouhy.springboot.enums.ResultEnum;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Slf4j
 public class ErrorBean {
@@ -25,4 +24,11 @@ public class ErrorBean {
         this.setCode(resultEnum.getCode());
         this.setMessage(resultEnum.getMessage());
     }
+
+    public ErrorBean(ResultEnum resultEnum,String message){
+        this.setMessage(message);
+        this.setCode(resultEnum.getCode());
+    }
+
+    public ErrorBean(){}
 }

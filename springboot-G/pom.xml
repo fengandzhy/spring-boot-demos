@@ -13,6 +13,9 @@
         <module>springboot-commons</module>
         <module>springboot-exception</module>
         <module>springboot-validation</module>
+        <module>springboot-springfactory</module>
+        <module>springboot-mybatis</module>
+        <module>springboot-mybatis-generator</module>
     </modules>
     <packaging>pom</packaging>
 

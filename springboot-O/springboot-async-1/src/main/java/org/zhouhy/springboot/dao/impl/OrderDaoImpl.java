@@ -29,13 +29,13 @@ public class OrderDaoImpl implements OrderDao {
             try {
                 log.info("开始处理订单逻辑"+order.getOrderNumber());
                 Thread.sleep(2000); //这里模拟处理订单的过程
-                String resultStr = RandomStringUtils.randomNumeric(8);
-                Integer rNumber = Integer.parseInt(resultStr);
-                if(rNumber%5==0){
-                    deferredResult.setResult(ORDER+" failure");
-                }else{
-                    deferredResult.setResult(ORDER+" success");
-                }
+//                String resultStr = RandomStringUtils.randomNumeric(8);
+//                Integer rNumber = Integer.parseInt(resultStr);
+//                if(rNumber%5==0){
+//                    deferredResult.setResult(ORDER+" failure");
+//                }else{
+//                    deferredResult.setResult(ORDER+" success");
+//                }
                 mockQueue.push(order.getOrderNumber());
                 holder.getHolder().put(order.getOrderNumber(),deferredResult);
                 log.info("完成处理订单逻辑" + order.getOrderNumber());

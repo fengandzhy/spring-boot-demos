@@ -27,7 +27,7 @@ public class QueueListener implements ApplicationListener<ContextRefreshedEvent>
                     String orderNumber = mockQueue.pop();
                     if(orderNumber!=null){
                         log.info("返回订单处理结果："+orderNumber);
-                        //holder.getHolder().get(orderNumber).setResult("place order success");
+                        holder.getHolder().get(orderNumber).setResult("place order success");
                     }
                 }else{
                     try {

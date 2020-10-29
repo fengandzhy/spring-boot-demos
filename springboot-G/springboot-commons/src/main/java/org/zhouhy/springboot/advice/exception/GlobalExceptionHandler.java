@@ -61,6 +61,14 @@ public class GlobalExceptionHandler {
         return errorBean;
     }
 
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ErrorBean handleIllegalArgumentException(IllegalArgumentException e, HttpServletRequest request){
+        ErrorBean  errorBean = new ErrorBean(ResultEnum.USER_EXITS,e.getMessage());
+        log.warn("URL:{} ,参数校验异常:{}", request.getRequestURI(),e.getMessage());
+        return errorBean;
+    }
+
     private ErrorBean handleException(Throwable e,HttpServletRequest request){
         ErrorBean bean = new ErrorBean();
         log.info(e.getMessage());

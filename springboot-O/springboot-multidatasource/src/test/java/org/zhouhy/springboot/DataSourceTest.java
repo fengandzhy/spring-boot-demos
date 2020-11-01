@@ -1,8 +1,7 @@
-package org.zhouhy.springboot.druid;
+package org.zhouhy.springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -13,26 +12,26 @@ import java.sql.SQLException;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class DruidApplicationTest {
+public class DataSourceTest {
 
     @Resource(name="masterDataSource")
-    private DataSource masterdataSource;
+    private DataSource masterDataSource;
 
-    @Resource(name="slaverDataSource")
-    private DataSource slaverdataSource;
+    @Resource(name="slaveDataSource")
+    private DataSource slaveDataSource;
 
     @Test
-    public void contextLoad() throws SQLException {
-        System.out.println(masterdataSource.getClass().toString());
-        Connection connection = masterdataSource.getConnection();
+    public void contextLoad1() throws SQLException {
+        System.out.println(masterDataSource.getClass().toString());
+        Connection connection = masterDataSource.getConnection();
         System.out.println(connection.toString());
         connection.close();
     }
 
     @Test
     public void contextLoad2() throws SQLException {
-        System.out.println(slaverdataSource.getClass().toString());
-        Connection connection = slaverdataSource.getConnection();
+        System.out.println(slaveDataSource.getClass().toString());
+        Connection connection = slaveDataSource.getConnection();
         System.out.println(connection.toString());
         connection.close();
     }

@@ -17,6 +17,7 @@
         <module>springboot-mybatis</module>
         <module>springboot-mybatis-generator</module>
         <module>springboot-multidatasource</module>
+        <module>springboot-rabbitmq</module>
     </modules>
     <packaging>pom</packaging>
 

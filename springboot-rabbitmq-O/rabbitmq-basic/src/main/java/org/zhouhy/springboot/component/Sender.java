@@ -4,16 +4,14 @@ import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.Date;
-
-@Component(value="basicSender")
+@Component(value="sender")
 public class Sender {
-
+    
     @Autowired
-    private AmqpTemplate rabbitTemplate;
-
+    private AmqpTemplate template;
+    
     public void send(){
-        String msg = "hello "+new Date();
-        this.rabbitTemplate.convertAndSend("hello-zhy",msg);
+        String msg = "hello rabbitmq";
+        this.template.convertAndSend("hello-mq",msg);
     }
 }

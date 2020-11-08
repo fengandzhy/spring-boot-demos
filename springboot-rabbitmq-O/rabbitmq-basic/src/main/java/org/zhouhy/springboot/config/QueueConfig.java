@@ -1,20 +1,15 @@
 package org.zhouhy.springboot.config;
 
+
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class SenderConfig {
-
-
+public class QueueConfig {
+    
     @Bean
     public Queue queue(){
-        return new Queue("hello-zhy");
+        return new Queue("hello-mq");
     }
-
-//    @Bean
-//    public Queue queue1(){
-//        return new Queue("hello-zhy1");
-//    }
 }

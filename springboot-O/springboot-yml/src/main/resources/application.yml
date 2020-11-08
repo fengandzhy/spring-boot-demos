@@ -1,0 +1,11 @@
+mq:
+  config:
+    exchange: log.direct
+    queue:
+      error: log.error
+      error.routing: log.error.routing
+      error.routing.key: log.error.routing.key
+      info: log.info
+      info.routing: log.info.routing
+      info.routing.key: log.info.routing.key          
+      

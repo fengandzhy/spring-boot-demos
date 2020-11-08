@@ -8,8 +8,13 @@ import org.springframework.context.annotation.Configuration;
 public class SenderConfig {
 
 
-    @Bean
-    public Queue queue(){
-        return new Queue("hello-zhy");
-    }
+//    @Bean
+//    public Queue queue(){
+//        return new Queue("hello-zhy");
+//    }
+
+//    @Bean
+//    public Queue queue1(){
+//        return new Queue("hello-zhy1");
+//    }
 }

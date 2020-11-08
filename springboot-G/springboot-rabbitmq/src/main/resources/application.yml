@@ -1,8 +1,19 @@
-spring:
-  application:
+spring: 
+  application: 
     name: springboot-rabbitmq
-  rabbitmq:
+  rabbitmq: 
     host: 192.168.78.150
     port: 5672
     username: user
     password: password
+mq:
+  config:
+    exchange: log.direct
+    queue:
+      error: log.error
+      error.routing.key: log.error.routing.key
+      info: log.info
+      info.routing.key: log.info.routing.key
+
+
+

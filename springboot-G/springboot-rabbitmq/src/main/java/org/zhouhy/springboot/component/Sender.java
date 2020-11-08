@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
+//@Component(value="basicSender")
 public class Sender {
 
     @Autowired

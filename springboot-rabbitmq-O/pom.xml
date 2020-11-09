@@ -11,6 +11,7 @@
         <module>rabbitmq-basic</module>
         <module>rabbitmq-direct</module>
         <module>rabbitmq-fanout</module>
+        <module>rabbitmq-topic</module>
     </modules>
     <packaging>pom</packaging>
 

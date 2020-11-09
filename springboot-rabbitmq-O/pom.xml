@@ -10,6 +10,7 @@
     <modules>
         <module>rabbitmq-basic</module>
         <module>rabbitmq-direct</module>
+        <module>rabbitmq-fanout</module>
     </modules>
     <packaging>pom</packaging>
 

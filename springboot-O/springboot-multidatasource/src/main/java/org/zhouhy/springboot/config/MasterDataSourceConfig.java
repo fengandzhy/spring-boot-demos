@@ -22,19 +22,19 @@ public class MasterDataSourceConfig {
 
     @Bean(name = "masterDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.master")
-    @Primary
+    //@Primary
     public DataSource setDataSource() {
         return DruidDataSourceBuilder.create().build();
     }
 
     @Bean(name = "masterTransactionManager")
-    @Primary
+    //@Primary
     public DataSourceTransactionManager setTransactionManager(@Qualifier("masterDataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean(name = "masterSqlSessionFactory")
-    @Primary
+    //@Primary
     public SqlSessionFactory setSqlSessionFactory(@Qualifier("masterDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
@@ -43,7 +43,7 @@ public class MasterDataSourceConfig {
     }
 
     @Bean(name = "masterSqlSessionTemplate")
-    @Primary
+    //@Primary
     public SqlSessionTemplate setSqlSessionTemplate(@Qualifier("masterSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }

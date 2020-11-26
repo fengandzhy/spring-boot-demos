@@ -22,20 +22,20 @@ public class SlaveDataSourceConfig {
 
     @Bean(name = "slaveDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.slaver")
-    @Primary
+    //@Primary
     public DataSource setDataSource() {
         //return DataSourceBuilder.create().build();
         return DruidDataSourceBuilder.create().build();
     }
 
     @Bean(name = "slaveTransactionManager")
-    @Primary
+    //@Primary
     public DataSourceTransactionManager setTransactionManager(@Qualifier("slaveDataSource") DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
 
     @Bean(name = "slaveSqlSessionFactory")
-    @Primary
+    //@Primary
     public SqlSessionFactory setSqlSessionFactory(@Qualifier("slaveDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
@@ -44,7 +44,7 @@ public class SlaveDataSourceConfig {
     }
 
     @Bean(name = "slaveSqlSessionTemplate")
-    @Primary
+    //@Primary
     public SqlSessionTemplate setSqlSessionTemplate(@Qualifier("slaveSqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
         return new SqlSessionTemplate(sqlSessionFactory);
     }

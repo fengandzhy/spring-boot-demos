@@ -30,8 +30,9 @@ public class MybatisConfiguration {
     @ConfigurationProperties(prefix = ACCOUNT_PREFIX)
     @Primary
     public DataSource accountDataSource(){
-        return DataSourceBuilder.create().build();
+        //return DataSourceBuilder.create().build();
         //return DruidDataSourceBuilder.create().build();
+        return DruidDataSourceBuilder.create().build();
     }
 
     @Bean

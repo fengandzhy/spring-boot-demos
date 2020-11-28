@@ -25,7 +25,7 @@ public class OrderController {
 }
 ```
 The controller will return a DeferredResult<String>, which is a string wapper given by another thread. 
-The main thread will return null if you print ```result.getResult()```, but the value will be given by another thread (The listener thread) 
+The main thread will return null if you print ```result.getResult()```, but the value will be given by another thread (The listener thread)： 
 2. **Service**
 ```
 @Service(value="orderSerVice")
@@ -83,7 +83,7 @@ public class OrderDaoImpl implements OrderDao {
     }
 }
 ```
-In DAO, it push the order to a mockQueue and use a holder to the current deferredResult. 
+In DAO, it push the order to a mockQueue and use a holder to the current deferredResult.： 
 4. **MockQueue**
 ```
 @Component
@@ -115,7 +115,7 @@ public class MockQueue {
     }
 }
 ```
-In the MockQueue,because of the multi-threaded environment, we have to use 'synchronized' to the 'push' and 'pop' method
+In the MockQueue,because of the multi-threaded environment, we have to use 'synchronized' to the 'push' and 'pop' method：
 5. **QueueListener**
 ```
 @Component

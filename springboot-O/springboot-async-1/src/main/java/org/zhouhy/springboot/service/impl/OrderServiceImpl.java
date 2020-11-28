@@ -10,10 +10,7 @@ import org.zhouhy.springboot.entity.Order;
 import org.zhouhy.springboot.service.OrderService;
 
 @Service(value="orderSerVice")
-public class OrderServiceImpl implements OrderService {
-
-    @Autowired
-    private DeferredResultHolder holder;
+public class OrderServiceImpl implements OrderService {    
 
     @Autowired
     private OrderDao orderDao;

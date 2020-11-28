@@ -29,15 +29,8 @@ public class OrderDaoImpl implements OrderDao {
             try {
                 log.info("开始处理订单逻辑"+order.getOrderNumber());
                 Thread.sleep(2000); //这里模拟处理订单的过程
-//                String resultStr = RandomStringUtils.randomNumeric(8);
-//                Integer rNumber = Integer.parseInt(resultStr);
-//                if(rNumber%5==0){
-//                    deferredResult.setResult(ORDER+" failure");
-//                }else{
-//                    deferredResult.setResult(ORDER+" success");
-//                }
-                mockQueue.push(order.getOrderNumber());
-                holder.getHolder().put(order.getOrderNumber(),deferredResult);
+                mockQueue.push(order.getOrderNumber()); // 将订单号传给 queue 
+                holder.getHolder().put(order.getOrderNumber(),deferredResult); // 把deferredResult 暂时封存起来
                 log.info("完成处理订单逻辑" + order.getOrderNumber());
             } catch (InterruptedException e) {
                 e.printStackTrace();

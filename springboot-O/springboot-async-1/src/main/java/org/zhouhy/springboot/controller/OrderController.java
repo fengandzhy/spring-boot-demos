@@ -23,7 +23,7 @@ public class OrderController {
     public DeferredResult<String> processOrder(){
         log.info("主程序开始");
         DeferredResult<String> result = orderService.processOrder();
-        log.info("主程序结束");
+        log.info("主程序结束");        
         return result;
     }
 

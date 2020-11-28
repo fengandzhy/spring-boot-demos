@@ -15,6 +15,7 @@
         <module>springboot-async-1</module>
         <module>springboot-multidatasource</module>
         <module>springboot-yml</module>
+        <module>springboot-druid</module>
     </modules>
     <packaging>pom</packaging>
 

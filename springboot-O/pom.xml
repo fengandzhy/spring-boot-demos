@@ -16,6 +16,7 @@
         <module>springboot-multidatasource</module>
         <module>springboot-yml</module>
         <module>springboot-druid</module>
+        <module>springboot-sendmail</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -17,6 +17,7 @@
         <module>springboot-yml</module>
         <module>springboot-druid</module>
         <module>springboot-sendmail</module>
+        <module>springboot-sendmail-1</module>
     </modules>
     <packaging>pom</packaging>
 

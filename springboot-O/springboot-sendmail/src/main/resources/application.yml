@@ -2,7 +2,7 @@ spring:
   mail:
     host: smtp.126.com #SMTP服务器地址
     username:  fengandzhy@126.com #登陆账号
-    password: EEWPLQBBOQXRMPXZ #登陆密码（或授权码）
+    password: LPGCHREJGCVUKUTS #登陆密码（或授权码）
     properties:
       from: fengandzhy@126.com #邮件发信人（即真实邮箱）
   thymeleaf:

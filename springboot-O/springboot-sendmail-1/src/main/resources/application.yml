@@ -5,7 +5,7 @@ spring:
     password: LPGCHREJGCVUKUTS
     protocol: smtp
     properties.mail.smtp.auth: true
-    properties.mail.smtp.port: 994 #465或者994
+    properties.mail.smtp.port: 465 #465或者994
     properties.mail.display.sendmail: Javen
     properties.mail.display.sendname: Spring Boot Guide Email
     properties.mail.smtp.starttls.enable: true

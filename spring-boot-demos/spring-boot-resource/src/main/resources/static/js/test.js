@@ -1,1 +1,1 @@
-console.log('static');
+console.log('static/js');

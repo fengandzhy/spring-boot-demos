@@ -9,8 +9,9 @@ public class PageController {
     /**
      * 引入了themeleaf之后，在这个controller的帮助下会找到在templates下面的html文件
      * */
-    @RequestMapping(value={"/","","/index"})
+    @RequestMapping(value={"/",""})
     public String index(){
-        return "index";
+        System.out.println("I am here!");
+        return "index.html";
     }
 }

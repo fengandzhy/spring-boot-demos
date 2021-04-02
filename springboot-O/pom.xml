@@ -18,6 +18,7 @@
         <module>springboot-druid</module>
         <module>springboot-sendmail</module>
         <module>springboot-sendmail-1</module>
+        <module>springboot-thymeleaf</module>
     </modules>
     <packaging>pom</packaging>
 

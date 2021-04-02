@@ -20,4 +20,10 @@ public class ThemeleafController {
         model.addAttribute("users",userList);
         return "users";
     }
+
+    @GetMapping("/fail")
+    public String fail(Model model){
+        model.addAttribute("fail","fail login");        
+        return "users";
+    }
 }

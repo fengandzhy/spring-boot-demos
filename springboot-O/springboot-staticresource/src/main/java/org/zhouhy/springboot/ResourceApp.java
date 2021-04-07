@@ -5,11 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 /**
- * 以下是静态资源的加载顺序
- * classpath:/META-INF/resources/
- * classpath:/resources/
- * classpath:/static/
- * classpath:/public/
+ * 1. Spring Boot 默认会挨个从META-INF/resources > resources > static > public  里面找是否存在相应的资源
  *
  * */
 @SpringBootApplication

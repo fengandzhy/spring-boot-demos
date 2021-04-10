@@ -5,9 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zhouhy.springboot.annotation.ResponseResultBody;
 import org.zhouhy.springboot.entity.User;
-import org.zhouhy.springboot.exception.ResultException;
-import org.zhouhy.springboot.result.Result;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

@@ -26,6 +26,8 @@ public class ResponseHandler implements ResponseBodyAdvice<Object> {
     //判断类或者方法是否使用了 @ResponseResultBody
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
+        log.info(AnnotatedElementUtils.hasAnnotation(returnType.getContainingClass(),ANNOTATION_TYPE)+"");
+        log.info(returnType.hasMethodAnnotation(ANNOTATION_TYPE)+"");
         return AnnotatedElementUtils.hasAnnotation(returnType.getContainingClass(),ANNOTATION_TYPE)
                 || returnType.hasMethodAnnotation(ANNOTATION_TYPE);
     }

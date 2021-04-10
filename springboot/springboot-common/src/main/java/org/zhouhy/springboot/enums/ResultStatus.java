@@ -16,6 +16,9 @@ public enum ResultStatus {
     
     SUCCESS(HttpStatus.OK,200,"OK"),
     BAD_REQUEST(HttpStatus.BAD_REQUEST,400,"Bad Request"),
+    METHOD_NOT_ALLOWED(HttpStatus.METHOD_NOT_ALLOWED,405,"Method not Allowed"),
+    BUSINESS_EXCEPTION1(HttpStatus.INTERNAL_SERVER_ERROR,500,"Business Exception 1"),
+    BUSINESS_EXCEPTION2(HttpStatus.INTERNAL_SERVER_ERROR,500,"Business Exception 2"),
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR,500,"Internal Server Error");
 
     //返回的HTTP状态码,  符合http请求

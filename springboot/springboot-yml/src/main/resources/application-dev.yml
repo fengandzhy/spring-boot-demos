@@ -6,7 +6,7 @@ mq:
   env.diat: b2c    
   config:
     exchange: log.direct
-    queue: 
+    queue:
       error: log.error
       error.routing: log.error.routing
       error.routing.key: log.error.routing.key

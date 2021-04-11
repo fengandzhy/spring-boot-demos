@@ -35,4 +35,13 @@ public enum ResultStatus {
         this.code = code;
         this.message = message;
     }
+    
+    public static ResultStatus getResult(HttpStatus status){
+        for(ResultStatus resultStatus:ResultStatus.values()){
+            if(resultStatus.httpStatus == status){
+                return  resultStatus;
+            }
+        }
+        return null;
+    }
 }

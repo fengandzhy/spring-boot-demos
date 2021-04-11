@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *  3) 定义这个实现了ResponseBodyAdvice 接口的类
  *  
  * 2. 在这个实现了ResponseBodyAdvice 接口的类(ResponseHandler)当中加上 @RestControllerAdvice 或者 @ControllerAdvice
- * 才能实现返回结果的统一
+ * 才能实现返回结果的统一, 这个主要在beforeBodyWrite 这个方法里实现. 这个body就是要返回的数据, 如果这个body是string 那么必须也要把返回类型包装成string 
  * 
  * 3. 在这个实现了ResponseBodyAdvice 接口的类中有个方法叫做supports, 用来判断什么样的controller 什么样的方法才能适用于这个统一的返回结果
  * 在本例中就是添加了@ResponseResultBody 注解的方法或者controller. 例如在本例中HelloResultController上面有注解@ResponseResultBody 

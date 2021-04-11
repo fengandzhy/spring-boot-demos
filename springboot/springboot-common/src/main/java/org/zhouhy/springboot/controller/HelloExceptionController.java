@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.zhouhy.springboot.annotation.ResponseResultBody;
+import org.zhouhy.springboot.exception.MyException;
 import org.zhouhy.springboot.exception.ResultException;
 import org.zhouhy.springboot.result.Result;
 
@@ -18,8 +19,24 @@ import java.util.Map;
 public class HelloExceptionController {
 
     @GetMapping("/1")     
-    public HashMap<String, Object> helloJavaError() throws Exception {
+    public HashMap<String, Object> nullPointer() throws Exception {
         throw new NullPointerException("helloError");
+    }
+
+    @GetMapping("/2")
+    public HashMap<String, Object> myException() throws Exception {
+        throw new MyException(1001,"用户找不到");
+    }
+
+    @GetMapping("/3")
+    public HashMap<String, Object> myRuntimeException() throws Exception {
+        throw new MyException(1002,"程序运行时错误");
+    }
+
+    @GetMapping("/4")
+    public HashMap<String, Object> runtimeException() throws Exception {
+        int a = 1/0;
+        return null;
     }
 
 //    private static final HashMap<String, Object> INFO;

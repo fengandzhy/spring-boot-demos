@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--选中-->
+<select name="compId" id="compId">
+    <option th:each="brand : ${brands}" 
+            th:text="${brand.name}" 
+            th:value="${brand.id}" 
+            th:selected="${brand.id+''  eq category.content}"></option>
+</select>
+<!--循环-->
+<table>
+    <tr th:each="list,stat : ${brands}">
+        <td th:text="${stat.count}"></td>        
+        <td th:text="${list.name}"></td>
+        <td th:text="${list.price}"></td>
+    </tr>    
+</table>
+
+<p>[[${#strings.substring(userphone,0,3)}]]<span>****</span>[[${#strings.substring(userphone,7,11)}]] </p>
+
+[[${#strings.startsWith(name,'o')}]]
+
+
+
+</body>
+<script type="text/javascript">
+    // JS 取值
+    var num = [[${num}]];
+    console.log(num);
+</script>
+</html>

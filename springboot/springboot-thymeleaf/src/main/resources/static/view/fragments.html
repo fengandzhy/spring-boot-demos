@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span th:fragment="pagination"> 
+the public pagination
+</span>
+
+<!--这块的${onevar} 指的就是 传过来的值-->
+<div th:fragment="Five(onevar,twovar)">
+    <p th:text="${onevar} + ' - - - - - ' + ${twovar}"></p>
+</div>
+
+
+
+</body>
+</html>

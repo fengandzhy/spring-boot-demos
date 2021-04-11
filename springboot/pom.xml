@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>springboot-common</module>
+        <module>springboot-thymeleaf</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

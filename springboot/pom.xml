@@ -12,6 +12,7 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-yml</module>
         <module>springboot-resttemplate</module>
+        <module>springboot-jpa</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

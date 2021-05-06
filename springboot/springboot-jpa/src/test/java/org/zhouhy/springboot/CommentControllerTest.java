@@ -28,25 +28,30 @@ public class CommentControllerTest {
     @Test
     public void concurrentComment() {
         String url = "http://localhost:8080/comment";
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             int finalI = i;
             new Thread(() -> {
+                System.out.println("AAAv"+finalI);
                 MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
                 params.add("articleId", "1");
                 params.add("content", "测试内容" + finalI);
-                String result = testRestTemplate.postForObject(url, params, String.class);
-                System.out.println(result);
+                String result = testRestTemplate.postForObject(url, params, String.class);                
             }).start();
         }
     }
 
+//    @Test
+//    //10个线程 执行10次
+//    @PerfTest(invocations = 100,threads = 10)
+//    public void test() {
+//
+//        commentService.postComment(1l,"Abc");
+//
+//    }
+
     @Test
-    //10个线程 执行10次
-    @PerfTest(invocations = 100,threads = 10)
-    public void test() {
-
-        commentService.postComment(1l,"Abc");
-
+    public void test1() {
+        System.out.println("AAbb");
     }
 
 }

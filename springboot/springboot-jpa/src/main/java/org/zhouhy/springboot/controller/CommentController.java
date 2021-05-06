@@ -14,7 +14,7 @@ public class CommentController {
     private CommentService commentService;
 
     @PostMapping("comment")
-    public String comment(Long articleId, String content) {
+    public String comment(Long articleId, String content) {        
         try {
             commentService.postComment(articleId, content);
         } catch (Exception e) {

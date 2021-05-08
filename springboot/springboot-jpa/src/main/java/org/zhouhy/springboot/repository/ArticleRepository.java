@@ -22,4 +22,6 @@ public interface ArticleRepository extends CrudRepository<Article, Long> {
     @Override
     @Lock(value = LockModeType.PESSIMISTIC_WRITE)
     Optional<Article> findById(Long id);
+    
+    
 }

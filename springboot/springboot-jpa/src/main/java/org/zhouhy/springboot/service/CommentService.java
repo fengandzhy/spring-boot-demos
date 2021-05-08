@@ -24,8 +24,9 @@ public class CommentService {
 
     @Transactional
     public void postComment(Long articleId, String content) {
-        //Optional<Article> articleOptional = articleRepository.findById(articleId);
-        Optional<Article> articleOptional = articleRepository.findArticleWithPessimisticLock(articleId);
+        Optional<Article> articleOptional = articleRepository.findById(articleId);
+        //Optional<Article> articleOptional = articleRepository.findArticleWithPessimisticLock(articleId);
+        //Optional<Article> articleOptional = articleRepository.findArticleForUpdate(articleId);
         if (!articleOptional.isPresent()) {
             throw new RuntimeException("没有对应的文章");
         }

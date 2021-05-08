@@ -14,8 +14,7 @@ import org.springframework.util.MultiValueMap;
 import org.zhouhy.springboot.service.CommentService;
 
 @RunWith(SpringRunner.class)
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class CommentControllerTest {
     @Autowired
     private TestRestTemplate testRestTemplate;
@@ -28,11 +27,10 @@ public class CommentControllerTest {
 
     @Test
     public void concurrentComment() {
-        String url = "http://localhost:8080/comment";
-        for (int i = 0; i < 20; i++) {
+        String url = "http://localhost:8088/comment";
+        for (int i = 0; i < 100; i++) {
             int finalI = i;
-            new Thread(() -> {
-                System.out.println("AAAv"+finalI);
+            new Thread(() -> {                
                 MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
                 params.add("articleId", "1");
                 params.add("content", "测试内容" + finalI);
@@ -44,7 +42,7 @@ public class CommentControllerTest {
     @Test
     //10个线程 执行10次
     @PerfTest(invocations = 100,threads = 10)
-    public void test() {
+    public void invocationTest() {
 
         commentService.postComment(1l,"Abc");
 

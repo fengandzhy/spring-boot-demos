@@ -14,7 +14,8 @@ import org.springframework.util.MultiValueMap;
 import org.zhouhy.springboot.service.CommentService;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@SpringBootTest
 public class CommentControllerTest {
     @Autowired
     private TestRestTemplate testRestTemplate;
@@ -40,14 +41,14 @@ public class CommentControllerTest {
         }
     }
 
-//    @Test
-//    //10个线程 执行10次
-//    @PerfTest(invocations = 100,threads = 10)
-//    public void test() {
-//
-//        commentService.postComment(1l,"Abc");
-//
-//    }
+    @Test
+    //10个线程 执行10次
+    @PerfTest(invocations = 100,threads = 10)
+    public void test() {
+
+        commentService.postComment(1l,"Abc");
+
+    }
 
     @Test
     public void test1() {

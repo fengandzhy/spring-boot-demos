@@ -6,15 +6,6 @@ spring:
     password: root
     username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#  jpa:
-#    database: mysql
-#    generate-ddl: true
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: update
-#      naming:
-#        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
   jpa:
       database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
       show-sql: false

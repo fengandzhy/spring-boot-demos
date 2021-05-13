@@ -14,6 +14,7 @@
         <module>springboot-resttemplate</module>
         <module>springboot-jpa</module>
         <module>springboot-jpa-1</module>
+        <module>springboot-mockmvc</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -92,7 +93,14 @@
                     <skip>true</skip>
                     <fork>true</fork>
                 </configuration>
-            </plugin>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

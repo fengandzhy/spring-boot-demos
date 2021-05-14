@@ -77,5 +77,33 @@ public class UserControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.jsonPath("$.length()").value(1));
     }
+
+
+    @Test
+    public void findUserByIdTest() throws Exception{
+        String result = mockMvc.perform(MockMvcRequestBuilders.get("/user/2")                
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())                
+                .andReturn().getResponse().getContentAsString();
+        System.out.println(result);
+    }
+
+    @Test
+    public void findUserByIdTest1() throws Exception{
+        String result = mockMvc.perform(MockMvcRequestBuilders.get("/user1/2")
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn().getResponse().getContentAsString();
+        System.out.println(result);
+    }
+
+    @Test
+    public void findUserByIdTest2() throws Exception{
+        String result = mockMvc.perform(MockMvcRequestBuilders.get("/user2/2")
+                .contentType(MediaType.APPLICATION_JSON_UTF8))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn().getResponse().getContentAsString();
+        System.out.println(result);
+    }
     
 }

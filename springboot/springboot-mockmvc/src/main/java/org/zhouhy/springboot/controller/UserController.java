@@ -1,13 +1,11 @@
 package org.zhouhy.springboot.controller;
 
+import com.fasterxml.jackson.annotation.JsonView;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.zhouhy.springboot.dto.User;
 import org.zhouhy.springboot.dto.UserSearchCondition;
 
@@ -55,4 +53,32 @@ public class UserController {
         users.add(new User());
         return users;
     }
+
+    @JsonView(User.UserSimpleView.class)
+    @RequestMapping(value="/user/{id:\\d+}",method = RequestMethod.GET)
+    public User findUserById (@PathVariable(name="id") Integer Id){
+        return createUser(Id);
+    }
+
+    @JsonView(User.UserDetailView.class)
+    @RequestMapping(value="/user1/{id:\\d+}",method = RequestMethod.GET)
+    public User findUserById1 (@PathVariable(name="id") Integer Id){
+        return createUser(Id);
+    }
+
+    
+    @RequestMapping(value="/user2/{id:\\d+}",method = RequestMethod.GET)
+    public User findUserById2 (@PathVariable(name="id") Integer Id){
+        return createUser(Id);
+    }
+    
+    private User createUser(Integer Id){
+        User user = new User();
+        user.setId(Id);
+        user.setUsername("Abc");
+        user.setPassword("123");
+        user.setAge(3);
+        return user;
+    }
+    
 }

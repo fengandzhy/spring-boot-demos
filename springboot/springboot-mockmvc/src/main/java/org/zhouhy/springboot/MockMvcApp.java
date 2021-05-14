@@ -17,6 +17,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 
  * 4. 你可以用这种方式来设置Pageable的默认参数@PageableDefault(page=2,size=17,sort="username,desc")
  * 
+ * 5. 关于这个jsonpath 的东西可以参考 https://github.com/json-path/JsonPath
+ * 
+ * 6. 关于这个@JsonView, 如果一个controller上多了一个@JsonView这个属性, 那么它所能返回的只能是这个@JsonView 在Javabean上标注的属性
+ * 例如在这个User的password上标注了@JsonView(UserDetailView.class), 而在controller的findUserById1上标注了@JsonView(User.UserDetailView.class)
+ * 那么这个findUserById1返回的user 里面的 json 字段只有 username 和 password. 有username的原因是因为在User里面username的属性
+ * 被标注为@JsonView(UserSimpleView.class) 而 UserDetailView extends UserSimpleView
+ * 
+ * 
+ * 
+ *  
+ * 
  * */
 @SpringBootApplication
 public class MockMvcApp {

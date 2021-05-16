@@ -6,6 +6,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
@@ -41,6 +42,14 @@ public class GlobalExceptionHandler {
         log.error("MyRuntimeException: {} ", ex.getMessage());
         MyRuntimeException myRuntimeException = (MyRuntimeException)ex;
         Result<?> body = Result.failure(ResultStatus.BUSINESS_EXCEPTION2,myRuntimeException.getCode()+" "+myRuntimeException.getMessage());
+        return this.handleException(ex,body,request);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public final ResponseEntity<Result<?>> methodArgumentNotValidExceptionHandler(Exception ex, WebRequest request) {
+        log.error("MyRuntimeException: {} ", ex.getMessage());
+        MethodArgumentNotValidException myRuntimeException = (MethodArgumentNotValidException)ex;
+        Result<?> body = Result.failure(ResultStatus.ARGUMENT_NOT_VALID,myRuntimeException.getMessage());
         return this.handleException(ex,body,request);
     }
 

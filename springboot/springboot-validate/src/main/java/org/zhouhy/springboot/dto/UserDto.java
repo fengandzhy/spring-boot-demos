@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.Length;
 import org.zhouhy.springboot.annotation.Password;
 import org.zhouhy.springboot.annotation.Phone;
 
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.Date;
 
@@ -36,4 +37,7 @@ public class UserDto {
     private Date updateTime;
     @Past
     private Date createTime;
+    
+    @Valid
+    private CustomerDto customerDto;
 }

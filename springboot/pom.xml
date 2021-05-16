@@ -16,6 +16,7 @@
         <module>springboot-jpa-1</module>
         <module>springboot-mockmvc</module>
         <module>springboot-validate</module>
+        <module>springboot-async</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

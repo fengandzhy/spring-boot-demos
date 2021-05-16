@@ -17,6 +17,7 @@ public class UserController {
 
     @PostMapping(value="/create",consumes = APPLICATION_JSON_UTF8_VALUE)
     public void createUser(@RequestBody @Validated UserDto userDto){
+        System.out.println(userDto);
         log.info("creating a user....");
         try {
             Thread.sleep(100);

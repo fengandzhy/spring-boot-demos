@@ -114,6 +114,7 @@ public class UserControllerTest {
         Date date = new Date();
         System.out.println(date.getTime());        
         String content = "{\"username\":\"Abc\",\"password\":\"123\",\"age\":3,\"id\":2,\"date\":"+date.getTime()+"}";
+//        String content = "{\"username\":\"Abc\",\"password\":\"123\",\"age\":3,\"id\":2,\"date\":\"2019-05-29\"}";
         String result = mockMvc.perform(MockMvcRequestBuilders.post("/user")
                 .content(content)
                 .contentType(MediaType.APPLICATION_JSON_UTF8))

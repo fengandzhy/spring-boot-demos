@@ -33,12 +33,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 从1970年1月1日起的秒数. 但是springboot 的版本如果是2.0 之后的, 直接输出就不会是这个long型数据了. 要得到这个long型的
  * 数据就需要做一个转换, 在application.properties里加入 spring.jackson.serialization.write-dates-as-timestamps=true
  * 
- * 10. 如果输出数据要得到其他的格式的spring.jackson.serialization.date-format 和 spring.jackson.serialization.time-zone
+ * 10. 如果输出数据要得到其他的格式的spring.jackson.date-format 和 spring.jackson.time-zone
  *  
  * 11. 如果你要知道你所在的时区是哪个, 如下代码可知.
  * Calendar cal = Calendar.getInstance();
  * TimeZone timeZone = cal.getTimeZone();
  * System.out.println(timeZone.getID());
+ * 
+ * 
+ * 13. 如果设置了spring.jackson.date-format 和 spring.jackson.time-zone 那么传入的值也会受到影响. 
+ * 在以前的springboot中 默认的输入是时间戳, 默认的输出也是时间戳. 现在的springboot里可以输入的yyyy-mm-dd格式的数据
+ * 作为日期, 输出类似于'2017-07-13T00:00:00.000+0000' 如果spring.jackson.date-format定义成了 yyyy-MM-dd HH:mm:ss
+ * 那么输入可以是时间戳以及yyyy-MM-dd HH:mm:ss 原先的默认yyyy-mm-dd已经不好使了. 
+ * 
  * 
  * 
  * 

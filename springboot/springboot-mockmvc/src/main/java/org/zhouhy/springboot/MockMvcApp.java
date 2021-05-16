@@ -24,9 +24,23 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 那么这个findUserById1返回的user 里面的 json 字段只有 username 和 password. 有username的原因是因为在User里面username的属性
  * 被标注为@JsonView(UserSimpleView.class) 而 UserDetailView extends UserSimpleView
  * 
+ * 7. 关于这个@RequestBody 它所起的作用就是当后台传上来一个类似于json的字符串时, 将其转换成为一个JavaBean对象
  * 
+ * 8. 关于这个时间的输入, 假设在User字段上有个Date类型的属性,在你不需要转换器的时候输入的是date.getTime()
+ * 就是说要输入的是一个long型的数据, 从1970年1月1日起的秒数.
  * 
+ * 9. 在输出的时候是这样的, 如果springboot的是以前的版本1.5 左右的, 不用做特殊处理直接输入的话, 就是一个long型的数据
+ * 从1970年1月1日起的秒数. 但是springboot 的版本如果是2.0 之后的, 直接输出就不会是这个long型数据了. 要得到这个long型的
+ * 数据就需要做一个转换, 在application.properties里加入 spring.jackson.serialization.write-dates-as-timestamps=true
+ * 
+ * 10. 如果输出数据要得到其他的格式的spring.jackson.serialization.date-format 和 spring.jackson.serialization.time-zone
  *  
+ * 11. 如果你要知道你所在的时区是哪个, 如下代码可知.
+ * Calendar cal = Calendar.getInstance();
+ * TimeZone timeZone = cal.getTimeZone();
+ * System.out.println(timeZone.getID());
+ * 
+ * 
  * 
  * */
 @SpringBootApplication

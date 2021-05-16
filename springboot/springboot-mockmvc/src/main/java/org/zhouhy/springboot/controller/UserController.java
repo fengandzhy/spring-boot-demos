@@ -57,6 +57,7 @@ public class UserController {
     @JsonView(User.UserSimpleView.class)
     @RequestMapping(value="/user/{id:\\d+}",method = RequestMethod.GET)
     public User findUserById (@PathVariable(name="id") Integer Id){
+        //{"username":"Abc","password":"123","age":3,"id":2}
         return createUser(Id);
     }
 
@@ -70,6 +71,12 @@ public class UserController {
     @RequestMapping(value="/user2/{id:\\d+}",method = RequestMethod.GET)
     public User findUserById2 (@PathVariable(name="id") Integer Id){
         return createUser(Id);
+    }
+
+    @PostMapping(value="/user")
+    public User createUser (@RequestBody User user){
+        System.out.println(user.toString());       
+        return user;
     }
     
     private User createUser(Integer Id){

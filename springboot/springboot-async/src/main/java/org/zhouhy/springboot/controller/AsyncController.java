@@ -20,7 +20,7 @@ public class AsyncController {
         asyncService.credit();
         asyncService.sendMsg();
         asyncService.redis();
-        log.info("Task end");
+        log.info("Task end");        
         return "Ok";
     }
 }

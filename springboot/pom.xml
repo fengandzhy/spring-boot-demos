@@ -17,6 +17,7 @@
         <module>springboot-mockmvc</module>
         <module>springboot-validate</module>
         <module>springboot-async</module>
+        <module>springboot-factory</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

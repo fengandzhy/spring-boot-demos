@@ -18,6 +18,7 @@
         <module>springboot-validate</module>
         <module>springboot-async</module>
         <module>springboot-factory</module>
+        <module>springboot-mybatis-1</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

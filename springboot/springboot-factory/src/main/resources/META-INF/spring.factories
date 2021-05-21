@@ -1,2 +1,5 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=spring.MyConfig
-org.springframework.context.ApplicationListener=spring.MyListener
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+spring.MyConfig,\
+spring.MyListener
+
+

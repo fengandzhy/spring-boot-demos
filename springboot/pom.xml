@@ -36,7 +36,7 @@
         <jdk.version>1.8</jdk.version>
         <!--  依赖版本  -->
         <mapper.version>4.0.3</mapper.version>
-        <mysql.version>5.1.29</mysql.version>
+        <mysql.version>8.0.13</mysql.version>
     </properties>
 
     <dependencies>
@@ -69,31 +69,31 @@
             <version>2.9.2</version>
         </dependency>
 
-        <!--swagger-ui-->
+
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.3</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+
         <dependency>
             <groupId>commons-collections</groupId>
             <artifactId>commons-collections</artifactId>
-            <version>2.0</version>
+            <version>3.2.2</version>
         </dependency>
 
 

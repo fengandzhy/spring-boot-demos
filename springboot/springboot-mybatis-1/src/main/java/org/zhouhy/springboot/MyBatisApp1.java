@@ -1,5 +1,9 @@
 package org.zhouhy.springboot;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
+
 /**
  * Convention Over Configuration
  * 1. 关于maven 的scope, scope元素的作用：控制 dependency 元素的使用范围。通俗的讲，就是控制 Jar 包在哪些范围被加载和使用。 
@@ -20,8 +24,10 @@ package org.zhouhy.springboot;
  * 
  * 
  * */
+@SpringBootApplication
+@MapperScan("org.zhouhy.springboot.mapper")
 public class MyBatisApp1 {
     public static void main(String[] args) {
-        
+        SpringApplication.run(MyBatisApp1.class,args);
     }
 }

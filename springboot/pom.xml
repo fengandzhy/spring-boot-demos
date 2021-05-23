@@ -19,6 +19,7 @@
         <module>springboot-async</module>
         <module>springboot-factory</module>
         <module>springboot-mybatis-1</module>
+        <module>springboot-mybatis-generator</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

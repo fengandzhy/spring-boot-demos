@@ -10,9 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springboot-mybatis-1</artifactId>
-    <dependencies>
-        <!-- Mybatis Generator -->
-        
+    <dependencies>        
 
         <dependency>
             <groupId>tk.mybatis</groupId>
@@ -24,12 +22,7 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
-        </dependency>
-        
-        
-        
+        </dependency>       
     </dependencies>
-
     
-
 </project>

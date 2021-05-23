@@ -5,8 +5,12 @@
     <!--
       WARNING - @mbg.generated
     -->
+    <id column="id" jdbcType="INTEGER" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="enabled" jdbcType="BIT" property="enabled" />
+    <result column="sex" jdbcType="TINYINT" property="sex" />
+    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
   </resultMap>
 </mapper>

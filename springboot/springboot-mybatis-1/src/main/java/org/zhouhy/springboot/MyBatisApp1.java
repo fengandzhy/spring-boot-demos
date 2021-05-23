@@ -12,15 +12,12 @@ import tk.mybatis.spring.annotation.MapperScan;
  *  3) runtime 表示被依赖项目无需参与项目的编译，但是会参与到项目的测试和运行。与compile相比，被依赖项目无需参与项目的编译.
  *  4) test 表示被依赖项目仅仅参与测试相关的工作，包括测试代码的编译，执行。
  *  5) system system 元素与 provided 元素类似，但是被依赖项不会从 maven 仓库中查找，而是从本地系统中获取，systemPath 元素用于制定本地系统中 jar 文件的路径
- * 
- * 2. 关于mybatis 自动生成代码的步骤有这么以下几步
- *  1) 创建表users
- *  2) 修改pom文件, 加入依赖和一个插件
- *  3) 加入config.properties 和 generatorConfig.xml 文件, 其中config.properties文件里主要是数据库信息和package.name
- *  而generatorConfig.xml 这里面需要改的地方仅仅是最后的表名
- *  4) 双击 mybatis-generator:generate
- * 
- * 
+ *  
+ * 2. springboot 配置mybatis 的步骤
+ *  1) pom 文件中加入依赖
+ *  2) 修改application.properties文件, 具体的请参考本例
+ *  3) 在启动类里加载@MapperScan("org.zhouhy.springboot.mapper")
+ *  4) 编写各种entiry类和mapper接口和mappper xml文件
  * 
  * 
  * */

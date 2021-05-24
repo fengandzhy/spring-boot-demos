@@ -8,7 +8,9 @@ package org.zhouhy.springboot;
  *  而generatorConfig.xml 这里面需要改的地方仅仅是最后的表名
  *  4) 双击 mybatis-generator:generate
  *  
- *  
+ * 2. 注意如果是mysql-connector-java 8.0 以上的版本的话, 要加上如下的属性, 才能保证正常运行, 否则它会把所有库里的users表都创建一遍 
+ * <property name="nullCatalogMeansCurrent" value="true"/>
+ * 
  * */
 public class GeneratorApp {
     public static void main(String[] args) {

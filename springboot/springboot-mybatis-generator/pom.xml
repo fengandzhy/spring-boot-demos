@@ -10,9 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springboot-mybatis-generator</artifactId>
-    <properties>
-
-    </properties>
+    
 
     <dependencies>
         <dependency>
@@ -27,7 +25,7 @@
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper</artifactId>
             <version>${mapper.version}</version>
-        </dependency>        
+        </dependency>       
     </dependencies>
     <build>
         <resources>

@@ -2,6 +2,7 @@ package org.zhouhy.springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zhouhy.springboot.entity.User;
@@ -28,7 +29,24 @@ public class UserController {
             int gender = random.nextInt(2);
             user.setSex((byte)gender);
             user.setCreateTime(new Date());
-            userService.create(user);
+            this.userService.create(user);
         }
     }
+
+    @GetMapping("/update/{id}")
+    public void update(@PathVariable("id") Integer id){
+        this.userService.update(id);
+    }
+
+    @GetMapping("/search")
+    public void search(){
+        this.userService.search();
+    }
+
+    @GetMapping("/search_by_example")
+    public void searchByExample(){
+        this.userService.searchByExample();
+    }
+    
+    
 }

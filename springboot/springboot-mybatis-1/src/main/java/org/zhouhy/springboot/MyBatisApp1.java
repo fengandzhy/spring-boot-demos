@@ -19,6 +19,10 @@ import tk.mybatis.spring.annotation.MapperScan;
  *  3) 在启动类里加载@MapperScan("org.zhouhy.springboot.mapper")
  *  4) 编写各种entiry类和mapper接口和mappper xml文件
  * 
+ * 3. 如果要让mybatis 打印sql 语句, 在application.properties里面加入 logging.level.org.zhouhy.springboot=debug 即可
+ * 
+ * 4. 
+ * 
  * 
  * */
 @SpringBootApplication

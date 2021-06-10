@@ -55,6 +55,13 @@ public class UserService {
         criteria.andEqualTo("password","update_3");
         List<User> users = this.userMapper.selectByExample(example);
         log.info("example 查询结果,{}",users.toString());
+
+        log.info("----------------Example.Criteria 模糊查询： where username like ? ----------------");
+        example=new Example(User.class);
+        criteria=example.createCriteria();
+        criteria.andLike("username","%100%");
+        users=this.userMapper.selectByExample(example);
+        log.info("Example.Criteria查询结果，{}",users.toString());
         
     }
 }

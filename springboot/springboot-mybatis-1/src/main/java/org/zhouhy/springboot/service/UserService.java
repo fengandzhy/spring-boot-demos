@@ -29,6 +29,10 @@ public class UserService {
     }
 
     public void search(){
+        
+        User u = this.userMapper.selectByPrimaryKey(100);
+        System.out.println(u.toString());
+        
         log.info("--------------------search where sex =1 -----------------------------");
         User user = new User();
         user.setSex((byte)1);

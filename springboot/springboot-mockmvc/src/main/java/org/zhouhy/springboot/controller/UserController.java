@@ -81,6 +81,7 @@ public class UserController {
     
     private User createUser(Integer Id){
         User user = new User();
+        
         user.setId(Id);
         user.setUsername("Abc");
         user.setPassword("123");

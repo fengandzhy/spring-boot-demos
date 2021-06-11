@@ -59,7 +59,15 @@ public class UserService {
         log.info("----------------Example.Criteria 模糊查询： where username like ? ----------------");
         example=new Example(User.class);
         criteria=example.createCriteria();
-        criteria.andLike("username","%100%");
+        criteria.andLike("username","%3%");
+        users=this.userMapper.selectByExample(example);
+        log.info("Example.Criteria查询结果，{}",users.toString());
+
+        log.info("----------------Example.Criteria 排序： where username like ? order by id desc ----------------");
+        example=new Example(User.class);
+        example.setOrderByClause("id desc ");
+        criteria=example.createCriteria();
+        criteria.andLike("username","%3%");
         users=this.userMapper.selectByExample(example);
         log.info("Example.Criteria查询结果，{}",users.toString());
         

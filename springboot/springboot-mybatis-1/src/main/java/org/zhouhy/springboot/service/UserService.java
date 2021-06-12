@@ -7,6 +7,7 @@ import org.zhouhy.springboot.entity.User;
 import org.zhouhy.springboot.mapper.UserMapper;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -68,6 +69,16 @@ public class UserService {
         example.setOrderByClause("id desc ");
         criteria=example.createCriteria();
         criteria.andLike("username","%3%");
+        users=this.userMapper.selectByExample(example);
+        log.info("Example.Criteria查询结果，{}",users.toString());
+
+        log.info("----------------Example.Criteria in 查询： where id  in (1,2) ----------------");
+        example=new Example(User.class);
+        criteria=example.createCriteria();
+        List ids=new ArrayList();
+        ids.add(1);
+        ids.add(2);
+        criteria.andIn("id",ids);
         users=this.userMapper.selectByExample(example);
         log.info("Example.Criteria查询结果，{}",users.toString());
         

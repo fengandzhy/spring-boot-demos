@@ -1,6 +1,7 @@
 package org.zhouhy.springboot.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.zhouhy.springboot.entity.User;
@@ -81,6 +82,28 @@ public class UserService {
         criteria.andIn("id",ids);
         users=this.userMapper.selectByExample(example);
         log.info("Example.Criteria查询结果，{}",users.toString());
+
+        log.info("----------------分页查询1----------------");
+        User obj2=new User();
+        obj2.setSex((byte)1);
+        int count=this.userMapper.selectCount(obj2);
+        log.info("分页例子：总条数{}",count);
+        users=this.userMapper.selectByRowBounds(obj2,new RowBounds(0,10));
+        for (User u:users){
+            log.info("分页例子：第一页{}",u.toString());
+        }
+
+        log.info("----------------Example.Criteria分页查询2----------------");
+        example=new Example(User.class);
+        criteria=example.createCriteria();
+        criteria.andEqualTo("sex",1);
+        count=this.userMapper.selectCountByExample(example);
+        log.info("分页例子：总条数{}",count);
+
+        users=this.userMapper.selectByExampleAndRowBounds(example,new RowBounds(0,10));
+        for (User u:users){
+            log.info("分页例子：第一页{}",u.toString());
+        }
         
     }
 }

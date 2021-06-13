@@ -103,7 +103,6 @@ public class UserService {
         users=this.userMapper.selectByExampleAndRowBounds(example,new RowBounds(0,10));
         for (User u:users){
             log.info("分页例子：第一页{}",u.toString());
-        }
-        
+        }        
     }
 }

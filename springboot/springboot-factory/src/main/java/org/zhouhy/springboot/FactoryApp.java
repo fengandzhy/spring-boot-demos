@@ -3,10 +3,9 @@ package org.zhouhy.springboot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ImportResource;
-import spring.FileRead;
-import spring.MyBean;
-import spring.MyListener;
+import spring.*;
 
 /**
  * 1. spring.factories 在resource/META-INF下面, 它的作用将里面记录的bean注入到spring ioc 当中去
@@ -18,7 +17,8 @@ import spring.MyListener;
  * 
  * 3. @ImportResource 可以让spring boot读到额外的spring 配置文件
  * 
- * 
+ * 4. @Import 将其他类引入IOC容器中去, 打个比方说在MyConfig里面加入@Import({MyBean1.class}) 就等于是把spring.MyBean1 
+ * 引入了IOC容器
  * 
  * 
  * */
@@ -33,5 +33,15 @@ public class FactoryApp {
         System.out.println(myListener);
         FileRead fileRead = context.getBean("fileRead",FileRead.class);
         System.out.println(fileRead);
+
+        MyBean1 myBean1 = context.getBean("spring.MyBean1",MyBean1.class);
+        System.out.println(myBean1.info());
+//        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MyConfig.class);
+//        String[] beanDefinitionNames = annotationConfigApplicationContext.getBeanDefinitionNames();
+//        System.out.println("--------------------------------------------------------");
+//        for (String beanDefinitionName: beanDefinitionNames) {
+//            System.out.println(beanDefinitionName);
+//        }
+//        System.out.println("--------------------------------------------------------");
     }   
 }

@@ -8,4 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableConfigurationProperties
 @EnableTransactionManagement(proxyTargetClass = true)
 public class MybatisConfiguration {
+
+    final static String ACCOUNT_PREFIX = "spring.datasource.master";
+
+    final static String REDPACKET_PREFIX = "spring.datasource.slaver";
 }

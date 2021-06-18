@@ -23,4 +23,10 @@ public class MybatisConfiguration {
     public DataSource accountDataSource() {
         return DruidDataSourceBuilder.create().build();
     }
+
+    @Bean(name = "RedPacketDataSource")
+    @ConfigurationProperties(prefix = REDPACKET_PREFIX)  // application.properties中对应属性的前缀
+    public DataSource redPacketDataSource() {
+        return DruidDataSourceBuilder.create().build();
+    }
 }

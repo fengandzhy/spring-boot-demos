@@ -40,7 +40,7 @@
 
 
         <!-- 设置数据库表名 -->
-        <table tableName="users" domainObjectName="User">
+        <table tableName="red_packet_account" domainObjectName="RedPacketAccount">
             <generatedKey column="id" sqlStatement="JDBC"/>
         </table>
     </context>

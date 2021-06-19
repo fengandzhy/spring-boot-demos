@@ -14,13 +14,13 @@ import tk.mybatis.spring.annotation.MapperScan;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = {"org.zhouhy.springboot.mapper.slaver.mapper"}, sqlSessionFactoryRef = "slaverSqlSessionFactory")
+@MapperScan(basePackages = {"org.zhouhy.springboot.xml.slaver.xml"}, sqlSessionFactoryRef = "slaverSqlSessionFactory")
 public class SlaverDataSourceConfiguration {
 
     /**
      * mybatis的xml文件.
      */
-    public static final String MAPPER_XML_LOCATION = "classpath*:org/zhouhy/springboot/mapper/slaver/mapper/*.xml";
+    public static final String MAPPER_XML_LOCATION = "classpath*:org/zhouhy/springboot/mapper/slaver/xml/*.xml";
 
     @Autowired
     @Qualifier("slaverDataSource")

@@ -16,7 +16,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * 2. springboot 配置mybatis 的步骤
  *  1) pom 文件中加入依赖
  *  2) 修改application.properties文件, 具体的请参考本例
- *  3) 在启动类里加载@MapperScan("org.zhouhy.springboot.mapper")
+ *  3) 在启动类里加载@MapperScan("org.zhouhy.springboot.xml")
  *  4) 编写各种entiry类和mapper接口和mappper xml文件
  * 
  * 3. 如果要让mybatis 打印sql 语句, 在application.properties里面加入 logging.level.org.zhouhy.springboot=debug 即可
@@ -26,7 +26,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * 
  * */
 @SpringBootApplication
-@MapperScan("org.zhouhy.springboot.mapper")
+@MapperScan("org.zhouhy.springboot.xml")
 public class MyBatisApp1 {
     public static void main(String[] args) {
         SpringApplication.run(MyBatisApp1.class,args);

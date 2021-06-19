@@ -18,15 +18,15 @@ public class MybatisConfiguration {
 
     final static String REDPACKET_PREFIX = "spring.datasource.slaver";
 
-    @Bean(name = "AccountDataSource")
+    @Bean(name = "masterDataSource")
     @ConfigurationProperties(prefix = ACCOUNT_PREFIX)  // application.properties中对应属性的前缀
-    public DataSource accountDataSource() {
+    public DataSource masterDataSource() {
         return DruidDataSourceBuilder.create().build();
     }
 
-    @Bean(name = "RedPacketDataSource")
+    @Bean(name = "slaverDataSource")
     @ConfigurationProperties(prefix = REDPACKET_PREFIX)  // application.properties中对应属性的前缀
-    public DataSource redPacketDataSource() {
+    public DataSource slaverDataSource() {
         return DruidDataSourceBuilder.create().build();
     }
 }

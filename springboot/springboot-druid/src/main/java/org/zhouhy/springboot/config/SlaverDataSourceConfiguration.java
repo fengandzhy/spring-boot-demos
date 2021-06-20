@@ -27,7 +27,7 @@ public class SlaverDataSourceConfiguration {
     DataSource slaverDataSource;
 
     @Bean
-    public SqlSessionTemplate redPacketSqlSessionTemplate() throws Exception {
+    public SqlSessionTemplate slaverSqlSessionTemplate() throws Exception {
         return new SqlSessionTemplate(slaveSqlSessionFactory());
     }
 

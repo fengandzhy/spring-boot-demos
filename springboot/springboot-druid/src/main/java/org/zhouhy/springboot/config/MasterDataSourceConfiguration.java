@@ -27,7 +27,7 @@ public class MasterDataSourceConfiguration {
      * 配置Sql Session模板
      */
     @Bean
-    public SqlSessionTemplate springSqlSessionTemplate() throws Exception {
+    public SqlSessionTemplate masterSqlSessionTemplate() throws Exception {
         return new SqlSessionTemplate(masterSqlSessionFactory());
     }
 

@@ -26,7 +26,7 @@ import tk.mybatis.spring.annotation.MapperScan;
  * 
  * */
 @SpringBootApplication
-@MapperScan("org.zhouhy.springboot.xml")
+@MapperScan("org.zhouhy.springboot.mapper")
 public class MyBatisApp1 {
     public static void main(String[] args) {
         SpringApplication.run(MyBatisApp1.class,args);

@@ -14,7 +14,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = {"org.zhouhy.springboot.xml.master.xml"}, sqlSessionFactoryRef = "masterSqlSessionFactory")
+@MapperScan(basePackages = {"org.zhouhy.springboot.mapper.master"}, sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfiguration {
     
     public static final String MAPPER_XML_LOCATION = "classpath*:org/zhouhy/springboot/xml/master/xml/*.xml";
@@ -46,7 +46,7 @@ public class MasterDataSourceConfiguration {
     /**
      *  配置事务
      */
-    @Bean(name="transactionManager")
+    @Bean(name="masterTransactionManager")
     public DataSourceTransactionManager transactionManager(){
         return new DataSourceTransactionManager(masterDataSource);
     }

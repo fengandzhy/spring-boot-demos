@@ -14,7 +14,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = {"org.zhouhy.springboot.xml.slaver.xml"}, sqlSessionFactoryRef = "slaverSqlSessionFactory")
+@MapperScan(basePackages = {"org.zhouhy.springboot.mapper.slaver"}, sqlSessionFactoryRef = "slaverSqlSessionFactory")
 public class SlaverDataSourceConfiguration {
 
     /**
@@ -34,7 +34,7 @@ public class SlaverDataSourceConfiguration {
     /**
      * 配置SQL Session工厂
      */
-    @Bean
+    @Bean(name="slaverSqlSessionFactory")
     public SqlSessionFactory slaveSqlSessionFactory() throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(slaverDataSource);
@@ -45,7 +45,7 @@ public class SlaverDataSourceConfiguration {
     /**
      *  配置事务
      */
-    @Bean(name="transactionManager")
+    @Bean(name="slaverTransactionManager")
     public DataSourceTransactionManager transactionManager(){
         return new DataSourceTransactionManager(slaverDataSource);
     }

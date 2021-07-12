@@ -11,11 +11,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *  3) 注意各种访问以及结果的验证, 具体请看考本例的代码
  *  
  * 2. 如果controller的方法里是一个Javabean作为参数的时候, 不用写@ReqeustParam 只需要传参跟Javabean的属性对应上就行
+ * 请注意在controller上的createUser 和 findUserByCondition, 他俩都是一个javabean作为参数的不同的是createUser 有一个@RequestBody
+ * 它的作用是把一个json的字符串转成对应的javabean. 而findUserByCondition它接受的只是request里面的参数
  * 
  * 3. 当你的controller的方法里有Pageable参数的时候, 你必须要穿三个参数size,page,sort, 如果你没有传参数它的默认值是
  * size=20, page=0,sort=UNSORTED
  * 
  * 4. 你可以用这种方式来设置Pageable的默认参数@PageableDefault(page=2,size=17,sort="username,desc")
+ * 关于这个分页查询 
+ * 1)在controller中制造一个Pageable  Pageable pageable = new PageRequest(pageNum - 1, pageSize, Sort.Direction.ASC, "id");
+ * 2) 然后service返回的是一个 pageList Page<User> pageList = userService.findById(id, pageable);
+ * 3) 然后在从pageList取出 dataList List<User> dataList = pageList.getContent();
+ * 
  * 
  * 5. 关于这个jsonpath 的东西可以参考 https://github.com/json-path/JsonPath
  * 

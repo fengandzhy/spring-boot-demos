@@ -21,6 +21,8 @@
         <module>springboot-mybatis-1</module>
         <module>springboot-mybatis-generator</module>
         <module>springboot-druid</module>
+        <module>springboot-transaction</module>
+        <module>springboot-swagger</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

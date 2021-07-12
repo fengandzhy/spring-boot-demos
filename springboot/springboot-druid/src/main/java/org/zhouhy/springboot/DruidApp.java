@@ -19,6 +19,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 3. 在service 用到@Transactional 的时候一定要注意指定是哪个manager 
  * @Transactional(rollbackFor = Exception.class,transactionManager="slaverTransactionManager")
  * 
+ * 4. 一般情况下配置druid数据源, 在配置了yml文件之后,必须要配置一个数据源, 这样才能被mybatis和jpa 识别.
+ * 
  * 
  * */
 @SpringBootApplication

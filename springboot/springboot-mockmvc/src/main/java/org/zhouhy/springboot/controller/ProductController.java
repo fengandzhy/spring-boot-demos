@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping(value="/product")
 public class ProductController {
     
-    @RequestMapping(value="/list",method = RequestMethod.GET)
+    @RequestMapping(value="/list",method = RequestMethod.GET,produces = {"application/json;charset=UTF-8"})
     public List<Product> listProduct(){
         List<Product> list = new ArrayList<>();
         Product p1 = new Product(1,"A");

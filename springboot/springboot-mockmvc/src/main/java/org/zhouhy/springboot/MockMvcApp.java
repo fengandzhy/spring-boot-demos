@@ -53,7 +53,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 作为日期, 输出类似于'2017-07-13T00:00:00.000+0000' 如果spring.jackson.date-format定义成了 yyyy-MM-dd HH:mm:ss
  * 那么输入可以是时间戳以及yyyy-MM-dd HH:mm:ss 原先的默认yyyy-mm-dd已经不好使了. 
  * 
- * 
+ * 12. restcontroller 会自动转成json, 但是如果加入了jackson-jaxrs-xml-provider, 它就会把返回结果转成xml文件的格式
  * 
  * 
  * */

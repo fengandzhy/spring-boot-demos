@@ -23,6 +23,7 @@
         <module>springboot-druid</module>
         <module>springboot-transaction</module>
         <module>springboot-swagger</module>
+        <module>springboot-mybatis-generator-for-imooc</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

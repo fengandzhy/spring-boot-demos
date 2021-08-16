@@ -24,6 +24,7 @@
         <module>springboot-transaction</module>
         <module>springboot-swagger</module>
         <module>springboot-mybatis-generator-for-imooc</module>
+        <module>springboot-autoconfig</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

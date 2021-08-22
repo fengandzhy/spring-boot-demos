@@ -13,7 +13,13 @@ import org.zhouhy.springboot.config.ConditionalOnPropertyUserConfig;
  *  DeferredImportSelector 继承了 ImportSelector，区别在于 DeferredImportSelector 实例的 selectImports 方法调用时机晚于 ImportSelector 的实例，
  *  要等到 @Configuration 注解中相关的业务全部都处理完了才会调用；
  *  3) 如果该类实现了 ImportBeanDefinitionRegistrar 接口，Spring 容器就会实例化该类，并且调用其 registerBeanDefinitions 方法
- *  
+ *  4) 如果该类没有实现上述三种接口中的任何一个，Spring 容器就会直接实例化该类。
+ * 
+ * 2. @ConditionalOnProperty 注解用于判断是否存在指定的属性，以及判断属性的值是否是我们期待的值.
+ *  1) 如果在本例子中显示@ConditionalOnProperty(prefix = "hxstrive.service",
+ *  name="order.enable",havingValue = "1",matchIfMissing = true) 
+ *  则表示hxstrive.service.order.enable=1的时候 才会加载配置也就是说@Configuration 里面的@Bean才起作用
+ *  2) matchIfMissing = true 表示如果没有上述配置也能加载
  * 
  * 
  * 

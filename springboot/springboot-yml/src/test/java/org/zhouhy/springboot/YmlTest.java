@@ -8,10 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.zhouhy.springboot.config.Brand;
-import org.zhouhy.springboot.config.Car;
-import org.zhouhy.springboot.config.User;
-import org.zhouhy.springboot.config.YmlReader;
+import org.zhouhy.springboot.config.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,6 +29,9 @@ public class YmlTest {
 
     @Autowired
     private ApplicationContext applicationContext;
+    
+    @Autowired
+    private User1 user1;
     
     @Test
     public void test1(){
@@ -66,5 +66,10 @@ public class YmlTest {
     public void test5(){
         Car car = (Car)applicationContext.getBean("car");
         log.info(car.getName());
+    }
+
+    @Test
+    public void test6(){        
+        log.info(user1.toString());
     }
 }

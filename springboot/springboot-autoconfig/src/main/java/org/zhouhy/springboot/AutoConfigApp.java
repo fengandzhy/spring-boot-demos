@@ -21,7 +21,7 @@ import org.zhouhy.springboot.config.ConditionalOnPropertyUserConfig;
  *  则表示hxstrive.service.order.enable=1的时候 才会加载配置也就是说@Configuration 里面的@Bean才起作用
  *  2) matchIfMissing = true 表示如果没有上述配置也能加载
  * 
- * 
+ * 3. 被@Bean 标识的bean也能正常加载进自动配置
  * 
  * */
 

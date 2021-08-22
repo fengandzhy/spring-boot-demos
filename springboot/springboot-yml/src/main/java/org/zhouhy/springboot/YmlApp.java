@@ -26,6 +26,17 @@ import org.springframework.context.annotation.ImportResource;
  * 
  * 9. ApplicationContext 可以直接注入参考本例test5 
  * 
+ * 10. 关于@EnableConfigurationProperties
+ *  如果一个配置类只配置@ConfigurationProperties注解，而没有使用@Component，
+ *  那么在IOC容器中是获取不到properties 配置文件转化的bean, 例如本例的User1就是这样
+ *  说白了 @EnableConfigurationProperties 相当于把使用 @ConfigurationProperties 的类进行了一次注入。
+ *  例如在本例中EnableUser1这个类中@EnableConfigurationProperties(User1.class) 就相当于把
+ *  User1这个@ConfigurationProperties 的类重新注入到了IOC容器中
+ *  但是@EnableConfigurationProperties 一定要跟@Configuration联用
+ *  
+ *
+ * 
+ * 
  * 
  * */
 @SpringBootApplication

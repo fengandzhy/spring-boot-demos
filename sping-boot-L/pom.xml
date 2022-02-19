@@ -37,13 +37,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <!--spring boot 的插件, 如果这里有时会变成红色, 那么加入version 就可以了.-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.4.3</version>
             </plugin>
             <!--maven 编译工具的插件-->
             <plugin>

@@ -40,6 +40,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!--  编译jdk版本  -->
         <jdk.version>1.8</jdk.version>
+        <revision>1.0-SNAPSHOT</revision>
         <!--  依赖版本  -->
         <mapper.version>4.0.3</mapper.version>
         <mysql.version>8.0.13</mysql.version>

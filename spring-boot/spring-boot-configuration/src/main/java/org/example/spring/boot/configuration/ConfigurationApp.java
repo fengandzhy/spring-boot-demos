@@ -9,3 +9,4 @@ public class ConfigurationApp {
         SpringApplication.run(ConfigurationApp.class,args);
     }
 }
+

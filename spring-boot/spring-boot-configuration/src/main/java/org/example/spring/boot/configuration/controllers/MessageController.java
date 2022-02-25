@@ -1,18 +1,24 @@
 package org.example.spring.boot.configuration.controllers;
 
+import org.example.spring.boot.configuration.services.MessageService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 
-public class MessageController implements Controller {
+@RestController
+@RequestMapping("/api/v1/message")
+public class MessageController {
 
+    private MessageService messageService;
 
-    @Override
-    public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
-        return null;
+    public MessageController(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
+    @GetMapping("/list")
+    public String listMessages() {
+        messageService.serviceList();
+        return "listMessage";
     }
 }

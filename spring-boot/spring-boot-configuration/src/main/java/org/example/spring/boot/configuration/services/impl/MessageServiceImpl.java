@@ -8,7 +8,7 @@ public class MessageServiceImpl implements MessageService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MessageServiceImpl.class);
     
     @Override
-    public void serviceList() {
+    public void serviceList() {        
         LOGGER.info("In the Service");
     }
 }

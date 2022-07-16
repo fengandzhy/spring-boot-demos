@@ -5,10 +5,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-//@Service
+@Service
 public class MessageServiceImpl implements MessageService {
     private static final Logger LOGGER = LoggerFactory.getLogger(MessageServiceImpl.class);
-    
+
     @Override
     public void serviceList() {        
         LOGGER.info("In the Service");

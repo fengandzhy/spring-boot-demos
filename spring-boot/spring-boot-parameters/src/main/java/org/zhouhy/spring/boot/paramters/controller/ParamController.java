@@ -14,12 +14,14 @@ public class ParamController {
     
     @RequestMapping(value="accept-user-from-param")
     public String acceptUserFromParam (UserDto dto){
+        logger.info("at acceptUserFromParam method");
         logger.info(dto.toString());
         return "success";
     }
 
     @RequestMapping(value="accept-user-from-json")
     public String acceptUserFromJson (@RequestBody UserDto dto){
+        logger.info("at acceptUserFromJson method");
         logger.info(dto.toString());
         return "success";
     }

@@ -8,8 +8,7 @@
     <artifactId>microboot</artifactId>
     <version>${project.version}</version>
     <modules>
-        <module>microboot-common</module>
-        <module>microboot-web</module>
+        
     </modules>
     <packaging>pom</packaging>
     <!--spring boot 的版本-->

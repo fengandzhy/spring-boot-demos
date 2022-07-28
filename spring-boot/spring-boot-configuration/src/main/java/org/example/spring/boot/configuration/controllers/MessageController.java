@@ -15,7 +15,7 @@ public class MessageController {
     
     private final MessageService messageService;
     
-    public MessageController(MessageService messageService) {
+    public MessageController(@Qualifier("messageService") MessageService messageService) {
         this.messageService = messageService;
     }
 

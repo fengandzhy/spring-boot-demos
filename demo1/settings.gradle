@@ -1,4 +1,0 @@
-rootProject.name = 'demo1'
-include 'demo1-web'
-include 'demo01-common'
-

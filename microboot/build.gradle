@@ -1,3 +1,4 @@
+apply plugin: 'java'
 buildscript { 						// 定义脚本使用资源
     apply from: 'dependencies.gradle' // 引入所需要的依赖库文件
     repositories { 						// 脚本资源仓库
@@ -21,8 +22,7 @@ subprojects {
         mavenCentral()
     }
     dependencies {  // 公共依赖库管理
-//        compile(
-//        )
+        implementation('org.springframework.boot:spring-boot-devtools') // 允许进行项目的热部署
     }
     sourceSets {    // 源代码目录配置
         main { // main及相关子目录配置

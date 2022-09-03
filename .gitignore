@@ -33,6 +33,7 @@ hs_err_pid*
 # Gradle:
 .idea/gradle.xml
 .idea/
+.gradle/
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
@@ -44,6 +45,7 @@ hs_err_pid*
 
 # IntelliJ
 /out/
+/build/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -96,6 +98,6 @@ buildNumber.properties
 mvnw
 mvnw.cmd
 HELP.md
-./gradle
+
 
 

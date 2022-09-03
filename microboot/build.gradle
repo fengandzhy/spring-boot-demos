@@ -30,7 +30,10 @@ subprojects {
         testImplementation(libraries.'junit-jupiter-api')
         testImplementation(libraries.'junit-vintage-engine')
         testImplementation(libraries.'junit-jupiter-engine')
-        testImplementation(libraries.'junit-platform-launcher')
+        testImplementation(libraries.'junit-platform-launcher')        
+
+        compileOnly(libraries.'lombok') // 在编译的时候生效
+        annotationProcessor(libraries.'lombok') // 在注解的时候让其生效
     }
     sourceSets {    // 源代码目录配置
         main { // main及相关子目录配置

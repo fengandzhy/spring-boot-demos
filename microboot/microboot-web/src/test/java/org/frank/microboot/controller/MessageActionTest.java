@@ -30,10 +30,10 @@ public class MessageActionTest {
     }
     @Test
     public void testEcho() {    // 进行响应测试
-        String content = this.messageAction.echo("沐言科技：www.yootk.com");
-        String value = "【ECHO】沐言科技：www.yootk.com";
-        System.err.println("【@Test】测试echo()方法返回值，当前放回结果为：" + content);
-        Assertions.assertEquals(content, value); // 测试相等
+//        String content = this.messageAction.echo("沐言科技：www.yootk.com");
+//        String value = "【ECHO】沐言科技：www.yootk.com";
+//        System.err.println("【@Test】测试echo()方法返回值，当前放回结果为：" + content);
+//        Assertions.assertEquals(content, value); // 测试相等
     }
     
 }

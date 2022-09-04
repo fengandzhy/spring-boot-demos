@@ -83,7 +83,7 @@ subprojects {
 }
 project('microboot-web') { // 子模块
     dependencies { // 配置子模块依赖
-        implementation(project(':microboot-common')) // 引入其他子模块        
+        implementation (project(':microboot-common')) // 引入其他子模块        
     }
 }
 project('microboot-common') { // 子模块

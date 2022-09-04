@@ -26,6 +26,7 @@ subprojects {
         testImplementation('org.springframework.boot:spring-boot-starter-test') { // 此时默认会引入JUnit4组件
             exclude group: 'junit', module: 'junit' // 移除旧版本的测试工具
         }
+        implementation 'org.springframework.boot:spring-boot-starter-web'
         testImplementation(enforcedPlatform(libraries.'junit-bom')) // 将当前的项目强制性的绑定为JUnit5运行
         testImplementation(libraries.'junit-jupiter-api')
         testImplementation(libraries.'junit-vintage-engine')
@@ -82,11 +83,12 @@ subprojects {
 }
 project('microboot-web') { // 子模块
     dependencies { // 配置子模块依赖
-        implementation(project(':microboot-common')) // 引入其他子模块
-        implementation 'org.springframework.boot:spring-boot-starter-web'
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        implementation(project(':microboot-common')) // 引入其他子模块        
     }
 }
 project('microboot-common') { // 子模块
-    dependencies {} // 配置子模块依赖
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+//        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    } // 配置子模块依赖
 }

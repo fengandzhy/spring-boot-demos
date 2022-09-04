@@ -13,10 +13,4 @@ public class MessageTest {
         message.setContent("www.yootk.com"); // 自动生成setter方法
         System.out.println(message); // 调用toString()输出
     }
-
-//    @Test
-//    public void test2(){
-//        Message message = Message.builder().title("ABC").content("www.yootk.com").build();
-//        System.out.println(message);
-//    }
 }

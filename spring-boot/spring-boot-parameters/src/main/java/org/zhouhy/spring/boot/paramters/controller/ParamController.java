@@ -17,13 +17,26 @@ public class ParamController {
 
     /**
      *  @RequestParam 这里可以省略，当@RequestParam 省略时默认的方法的参数名就是请求的参数名
-     *  http://localhost:8080/request-param?username=321
+     *  http://localhost:8080/request-param1?username=321
      *  
      * */
-    @GetMapping("/request-param")
+    @GetMapping("/request-param1")
     public String requestPram1(String username){        
         return username;
     }
+
+    /**
+     *  @RequestParam 这里可以指定参数名, 当这里的参数名被制定 @RequestParam(name="username") 那方法里的参数可以随意取
+     *  http://localhost:8080/request-param2?username=123&age=456
+     *
+     * */
+    @GetMapping("/request-param2")
+    public String requestPram2(@RequestParam(name="username") String name, 
+                               @RequestParam(name="age") Integer age){
+        return "name is "+name+", age is "+age;
+    }
+    
+    
 
     /**
      * @PathVariable 这里是不能省略的, 否则就读取不到了

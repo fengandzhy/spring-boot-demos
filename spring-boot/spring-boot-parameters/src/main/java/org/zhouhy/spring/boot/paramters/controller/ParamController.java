@@ -5,6 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import org.zhouhy.spring.boot.paramters.dtos.UserDto;
 
+import java.util.Arrays;
+
 @RestController
 public class ParamController {
 
@@ -26,7 +28,7 @@ public class ParamController {
     }
 
     /**
-     *  @RequestParam 这里可以指定参数名, 当这里的参数名被制定 @RequestParam(name="username") 那方法里的参数可以随意取
+     *  @RequestParam 这里可以指定参数名, 当这里的参数名被制定 @RequestParam(name="username") 那方法里的参数名可以随意
      *  http://localhost:8080/request-param2?username=123&age=456
      *
      * */
@@ -35,8 +37,16 @@ public class ParamController {
                                @RequestParam(name="age") Integer age){
         return "name is "+name+", age is "+age;
     }
-    
-    
+
+    /**
+     *  @RequestParam 关于这个数组参数
+     *  http://localhost:8080/request-param1?username=123&username=456
+     *
+     * */
+    @GetMapping("/request-param3")
+    public String requestPram3(@RequestParam(name="usernames") String[] name){                             
+        return "name is "+ Arrays.toString(name);
+    }   
 
     /**
      * @PathVariable 这里是不能省略的, 否则就读取不到了

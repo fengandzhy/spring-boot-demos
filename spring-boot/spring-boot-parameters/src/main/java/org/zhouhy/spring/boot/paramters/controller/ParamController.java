@@ -58,16 +58,30 @@ public class ParamController {
     }
     
     
-    
+    /**
+     * 既可以用 form 表单的形式提交也可以用参数形式提交
+     * http://localhost:8080/accept-user-from-param?id=2&name =eww&age=4&address=4322&pwd=123
+     * */
     @RequestMapping(value="accept-user-from-param")
-    public String acceptUserFromParam (UserDto dto){
+    public String acceptUserFromParam (@RequestParam UserDto dto){
         logger.info("at acceptUserFromParam method");
         logger.info(dto.toString());
         return "success";
     }
 
-    @RequestMapping(value="accept-user-from-json")
+    @RequestMapping(value="accept-user-from-json", consumes = {
+            "application/json"
+    })
     public String acceptUserFromJson (@RequestBody UserDto dto){
+        logger.info("at acceptUserFromJson method");
+        logger.info(dto.toString());
+        return "success";
+    }
+
+    @RequestMapping(value="accept-user-from-xml", consumes = {
+            "application/xml"
+    })
+    public String acceptUserFromXml (@RequestBody UserDto dto){
         logger.info("at acceptUserFromJson method");
         logger.info(dto.toString());
         return "success";

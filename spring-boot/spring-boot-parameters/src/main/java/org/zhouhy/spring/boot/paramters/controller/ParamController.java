@@ -69,9 +69,13 @@ public class ParamController {
         return "success";
     }
 
-    @RequestMapping(value="accept-user-from-json", consumes = {
-            "application/json"
-    })
+//    @RequestMapping(value="accept-user-from-json", consumes = {
+//            "application/json"
+//    })
+    /**
+     * 
+     * */
+    @RequestMapping(value="accept-user-from-json")
     public String acceptUserFromJson (@RequestBody UserDto dto){
         logger.info("at acceptUserFromJson method");
         logger.info(dto.toString());

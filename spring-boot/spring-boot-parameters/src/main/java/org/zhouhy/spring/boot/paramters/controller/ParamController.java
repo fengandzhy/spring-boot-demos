@@ -4,8 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import org.zhouhy.spring.boot.paramters.dtos.UserDto;
-
 import java.util.Arrays;
+
 
 @RestController
 public class ParamController {
@@ -96,4 +96,6 @@ public class ParamController {
         logger.info(dto.toString());
         return "success";
     }
+
+    
 }

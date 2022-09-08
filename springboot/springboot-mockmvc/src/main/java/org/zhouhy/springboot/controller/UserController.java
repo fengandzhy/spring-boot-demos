@@ -3,7 +3,9 @@ package org.zhouhy.springboot.controller;
 import com.fasterxml.jackson.annotation.JsonView;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 import org.zhouhy.springboot.dto.User;
@@ -47,8 +49,7 @@ public class UserController {
         
         System.out.println(pageable.getPageSize());
         System.out.println(pageable.getPageNumber());
-        System.out.println(pageable.getSort());
-        
+        System.out.println(pageable.getSort());        
         List<User> users = new ArrayList<>();
         users.add(new User());
         return users;

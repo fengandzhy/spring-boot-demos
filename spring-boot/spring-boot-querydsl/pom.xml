@@ -51,13 +51,7 @@
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
             <version>${querydsl.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.2</version>
-        </dependency>
-    </dependencies>
+        </dependency> </dependencies>
 
     <build>
         <plugins>

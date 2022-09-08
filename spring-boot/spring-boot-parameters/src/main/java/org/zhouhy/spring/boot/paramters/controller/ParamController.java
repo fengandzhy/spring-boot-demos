@@ -73,7 +73,9 @@ public class ParamController {
 //            "application/json"
 //    })
     /**
-     * 
+     * @RequestBody是作用在形参列表上，用于将前台发送过来固定格式的数据【xml 格式或者 json等】
+     * 封装为对应的 JavaBean 对象，封装时使用到的一个对象是系统默认配置的 HttpMessageConverter进行解析，
+     * 然后封装到形参上。
      * */
     @RequestMapping(value="accept-user-from-json")
     public String acceptUserFromJson (@RequestBody UserDto dto){
@@ -82,6 +84,10 @@ public class ParamController {
         return "success";
     }
 
+    /**
+     * consumes = {"application/xml"} 表示只有Content-Type 是 application/xml 的请求才会被处理
+     * 
+     * */
     @RequestMapping(value="accept-user-from-xml", consumes = {
             "application/xml"
     })

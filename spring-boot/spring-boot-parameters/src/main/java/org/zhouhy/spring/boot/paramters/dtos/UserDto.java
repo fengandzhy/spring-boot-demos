@@ -1,9 +1,9 @@
 package org.zhouhy.spring.boot.paramters.dtos;
 
-//import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
-//@XmlRootElement(name="wx")
+@XmlRootElement(name="wx")
 public class UserDto implements Serializable {
     private Long id;
     

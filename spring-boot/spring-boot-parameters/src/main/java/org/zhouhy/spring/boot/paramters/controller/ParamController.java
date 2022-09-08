@@ -3,8 +3,14 @@ package org.zhouhy.spring.boot.paramters.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+import org.zhouhy.spring.boot.paramters.dtos.EmployeeDto;
 import org.zhouhy.spring.boot.paramters.dtos.UserDto;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 
 
 @RestController
@@ -97,5 +103,14 @@ public class ParamController {
         return "success";
     }
 
-    
+    @RequestMapping(value="get-employee")
+    public EmployeeDto getEmployee (){        
+        EmployeeDto dto = new EmployeeDto();
+        dto.setId(1);
+        dto.setAge(3);
+        dto.setPassword("123");
+        dto.setUsername("abc");
+        dto.setDate(Calendar.getInstance().getTime());         
+        return dto;
+    }
 }

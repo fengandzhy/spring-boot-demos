@@ -103,6 +103,13 @@ public class ParamController {
         return "success";
     }
 
+    
+    /**
+     * 在输出的时候是这样的, 如果springboot的是以前的版本1.5 左右的, 不用做特殊处理直接输入的话, 就是一个long型的数据
+     * 从1970年1月1日起的秒数. 但是springboot 的版本如果是2.0 之后的, 直接输出就不会是这个long型数据了. 要得到这个long型的
+     * 数据就需要做一个转换, 在application.properties里加入 spring.jackson.serialization.write-dates-as-timestamps=true
+     * 
+     * */
     @RequestMapping(value="get-employee")
     public EmployeeDto getEmployee (){        
         EmployeeDto dto = new EmployeeDto();

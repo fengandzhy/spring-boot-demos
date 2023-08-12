@@ -83,7 +83,9 @@ public class ParamController {
      * 封装为对应的 JavaBean 对象，封装时使用到的一个对象是系统默认配置的 HttpMessageConverter进行解析，
      * 然后封装到形参上。
      * */
-    @RequestMapping(value="accept-user-from-json")
+    @RequestMapping(value="accept-user-from-json",consumes = {
+            "application/json"
+    })
     public String acceptUserFromJson (@RequestBody UserDto dto){
         logger.info("at acceptUserFromJson method");
         logger.info(dto.toString());
@@ -98,7 +100,7 @@ public class ParamController {
             "application/xml"
     })
     public String acceptUserFromXml (@RequestBody UserDto dto){
-        logger.info("at acceptUserFromJson method");
+        logger.info("at acceptUserFromXml method");
         logger.info(dto.toString());
         return "success";
     }
@@ -119,5 +121,12 @@ public class ParamController {
         dto.setUsername("abc");
         dto.setDate(Calendar.getInstance().getTime());         
         return dto;
+    }
+
+    @RequestMapping(value="create-employee")
+    public String createEmployee (@RequestBody EmployeeDto dto){
+        logger.info("at createEmployee method");
+        logger.info(dto.toString());
+        return "success";
     }
 }

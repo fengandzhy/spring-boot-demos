@@ -13,6 +13,7 @@
         <module>spring-boot-configuration</module>
         <module>spring-boot-parameters</module>
         <module>spring-boot-querydsl</module>
+        <module>spring-boot-web</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

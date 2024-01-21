@@ -7,18 +7,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableConfigurationProperties(HelloProperties.class)
+//@EnableConfigurationProperties(HelloProperties.class)
 @ConditionalOnClass(HelloService.class)
 public class HelloServiceAutoConfiguration {
 
-    @Autowired
-    HelloProperties helloProperties;
+//    @Autowired
+//    HelloProperties helloProperties;
 
     @Bean
     HelloService helloService() {
         HelloService helloService = new HelloService();
-        helloService.setName(helloProperties.getName());
-        helloService.setMsg(helloProperties.getMsg());
+        helloService.setName("Frank");
+        helloService.setMsg("666");
+//        helloService.setName(helloProperties.getName());
+//        helloService.setMsg(helloProperties.getMsg());
         return helloService;
     }
 }

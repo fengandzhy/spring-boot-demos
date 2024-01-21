@@ -9,6 +9,7 @@ public class TencentSmsSenderImpl implements SmsSender{
     }
     @Override
     public boolean send(String message) {
-        return false;
+        System.out.println(smsMessage.toString()+"开始发送短信==》短信内容："+message);
+        return true;
     }
 }

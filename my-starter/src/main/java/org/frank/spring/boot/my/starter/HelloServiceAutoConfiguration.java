@@ -11,12 +11,13 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnClass(HelloService.class)
 public class HelloServiceAutoConfiguration {
 
-    @Autowired
     HelloProperties helloProperties;
 
     @Bean
     HelloService helloService() {
         HelloService helloService = new HelloService();
+//        helloService.setName("Frank");
+//        helloService.setMsg("666");
         helloService.setName(helloProperties.getName());
         helloService.setMsg(helloProperties.getMsg());
         return helloService;

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 
 public class CustomLocalDateTimeSerializer extends StdSerializer<LocalDateTime> {

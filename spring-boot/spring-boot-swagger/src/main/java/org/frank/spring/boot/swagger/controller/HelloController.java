@@ -26,7 +26,10 @@ public class HelloController {
     
     @PostMapping("/create")
     @ApiOperation("test create")
-    public String createUser(User user){
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "user", value = "User's details", required = true, dataType = "User", paramType = "body")
+    })
+    public String createUser(@RequestBody User user){
         return user.toString();
     }
     

@@ -17,6 +17,7 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-customer-starter</module>
         <module>spring-boot-sms-starter</module>
+        <module>spring-boot-event</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

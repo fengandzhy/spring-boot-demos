@@ -1,14 +1,8 @@
 package org.frank.spring.boot.swagger.controller;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.*;
 import org.frank.spring.boot.swagger.entity.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Api(tags="hello类测试")
 @RestController
@@ -34,5 +28,18 @@ public class HelloController {
     @ApiOperation("test create")
     public String createUser(User user){
         return user.toString();
+    }
+    
+    @GetMapping("/user/{id}")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="id",value="编号",required = true,paramType = "path")            
+    })
+    @ApiResponses({
+            @ApiResponse(code=408, message = "指定业务报错信息,返回客户端"),
+            @ApiResponse(code=400, message = "请求参数没填好"),
+            @ApiResponse(code=404, message = "请求路径不存在")
+    })
+    public User loadById(@PathVariable("id") Integer id){
+        return new User(1,"a",12);
     }
 }

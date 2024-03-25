@@ -21,6 +21,7 @@
         <module>spring-boot-swagger</module>
         <module>spring-boot-schedule</module>
         <module>spring-boot-time</module>
+        <module>spring-boot-runner</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

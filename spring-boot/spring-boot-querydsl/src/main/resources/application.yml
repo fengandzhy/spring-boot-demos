@@ -23,11 +23,3 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include: health,info,conditions

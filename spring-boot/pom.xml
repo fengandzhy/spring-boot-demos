@@ -22,6 +22,7 @@
         <module>spring-boot-schedule</module>
         <module>spring-boot-time</module>
         <module>spring-boot-runner</module>
+        <module>spring-boot-interceptor</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

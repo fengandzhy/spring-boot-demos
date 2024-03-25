@@ -19,6 +19,7 @@
         <module>spring-boot-sms-starter</module>
         <module>spring-boot-event</module>
         <module>spring-boot-swagger</module>
+        <module>spring-boot-schedule</module>
     </modules>
     <packaging>pom</packaging>
     <parent>

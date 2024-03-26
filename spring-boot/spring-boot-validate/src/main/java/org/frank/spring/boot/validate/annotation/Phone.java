@@ -2,7 +2,9 @@ package org.frank.spring.boot.validate.annotation;
 
 
 
-import org.zhouhy.springboot.validator.PhoneValidator;
+
+
+import org.frank.spring.boot.validate.validator.PhoneValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

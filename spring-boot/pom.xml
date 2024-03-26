@@ -26,6 +26,7 @@
         <module>spring-boot-async</module>
         <module>spring-boot-validate</module>
         <module>spring-boot-controller-advice</module>
+        <module>spring-boot-pessimistic-lock</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
